@@ -55,8 +55,6 @@ Although `registered` and `casual` are also present in the dataset, the final pr
    - 8.6 Evaluation After Tuning  
 9. Test Data Forecasting  
 
-***
-
 ## 4. Modeling Strategy
 
 ### Key Constraints
