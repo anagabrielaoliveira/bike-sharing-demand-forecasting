@@ -4,13 +4,11 @@ This project addresses the Bike Sharing Demand problem, aiming to predict the to
 
 The dataset presents right-skewed target distributions, temporal dependencies, and missing values.
 
-***
-
 ## 1. Problem Description
 
 The goal is to predict bike rental demand based on the available features.
 
-Target variable:
+### Target variable
 - `count` — total number of rentals  
   - `count = registered + casual`
 
@@ -27,17 +25,13 @@ Although `registered` and `casual` are also present in the dataset, the final pr
 - `humidity` - relative humidity
 - `windspeed` - wind speed
 
-***
-
 ## 2. Dataset Challenges
 
 - **Temporal gaps**: The dataset spans two years with missing values for `count`, `registered`, and `casual`.
 - **Right-skewed targets**: Median < mean for `casual`, `registered`, and `count`, indicating long right tails.
 - **Temporal dependency**: Despite being modeled as a regression task, temporal ordering is preserved during the train–test split to ensure generalization.
 
-***
-
-## . Project Structure
+## 3. Project Structure
 
 1. Problem Description  
 2. Imports  
@@ -71,47 +65,41 @@ Although `registered` and `casual` are also present in the dataset, the final pr
   - ability to model non-linear interactions
 - No feature engineering based on target-derived demand patterns. 
 
-**Outlier Treatment**
+### Outlier Treatment
 - Removal of extreme and clearly invalid observations.
 - Application of **Isolation Forest** for multivariate outlier detection.
 
-**Peak-based features**  
-Although hourly demand peaks are well-known, features derived from the training target distribution were intentionally avoided to prevent data leakage.
+### Peak-based features  
+- Although hourly demand peaks are well-known, features derived from the training target distribution were intentionally avoided to prevent data leakage.
+- Instead, only external domain knowledge was considered:
+    - Typical commuting hours on working days:
+        - Morning: 07–09
+        - Evening: 17–19
 
-Instead, only external domain knowledge was considered:
-- Typical commuting hours on working days:
-  - Morning: 07–09
-  - Evening: 17–19
+### Evaluation
+- RMSLE
 
-**Evaluation**
--RMSLE
-
-**Models Evaluated**
+### Models Evaluated
 - Random Forest (baseline)
 - XGBoost
 - LightGBM
 
-**Model Selected**
+### Model Selection
 - XGBoost and LightGBM showed very similar performance
 - **LightGBM** was selected
 
-**Feature Selection & Hyperparameter Tuning**
+### Feature Selection & Hyperparameter Tuning
 - Feature selection based on **feature importances**
 - Hyperparameter tuning performed using **Optuna**
 
-***
-
 ## 5. Model Performance 
 
-The Random Forest baseline performed well, confirming that tree-based models are suitable for this dataset.  
-Outlier removal led to a improvement in RMSLE.
+Random Forest baseline performed well, confirming that tree-based models are suitable for this dataset. Outlier removal led to a improvement in RMSLE.
 
 ### Residual Analysis
 
 - The initial baseline model exhibited a funnel-shaped residual pattern, characterized by overestimation at low target values and high variance at large target values
 - After modeling, residuals became more uniform and symmetric, the distribution centered around zero reflecting improved predictive stability
-
-***
 
 ## 6. Final Model & Forecasting
 
