@@ -4,6 +4,8 @@ This project addresses the Bike Sharing Demand problem, aiming to predict the to
 
 The dataset presents right-skewed target distributions, temporal dependencies, and missing values.
 
+RMSLE decreased from 0.32 (post-EDA baseline) to 0.28 after further processing.
+
 ## 1. Problem Description
 
 The goal is to predict bike rental demand based on the available features.
