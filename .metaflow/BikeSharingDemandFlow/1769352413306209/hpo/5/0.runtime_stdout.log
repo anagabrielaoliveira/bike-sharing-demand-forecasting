@@ -1,0 +1,12 @@
+[MFLOG|0|2026-01-25T14:47:02.591580Z|runtime|cf7a9145-cc82-4c9e-b6b9-1c18a4c529e3][W 2026-01-25 11:47:02,588] Trial 0 failed with parameters: {} because of the following error: AttributeError("Flow BikeSharingDemandFlow has no attribute 'X_train'").
+[MFLOG|0|2026-01-25T14:47:02.698857Z|runtime|9a9d5411-afb1-45b3-b6f8-beb846ab9931]Traceback (most recent call last):
+[MFLOG|0|2026-01-25T14:47:02.698872Z|runtime|b208e779-0eb3-4084-b5f2-59b1593c24ef]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/optuna/study/_optimize.py", line 206, in _run_trial
+[MFLOG|0|2026-01-25T14:47:02.698885Z|runtime|fcfe784c-5483-4b93-adad-4e1e3da923bd]    value_or_values = func(trial)
+[MFLOG|0|2026-01-25T14:47:02.698900Z|runtime|f76c9708-d99b-46b5-9df8-e80337cb80c8]                      ^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:47:02.698916Z|runtime|cc6c3ed1-ed77-4545-ae68-be8265d0f425]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/flow.py", line 109, in <lambda>
+[MFLOG|0|2026-01-25T14:47:02.698930Z|runtime|0b016548-0242-4f10-a374-b3b88bebe69e]    lambda trial: lgbm_objective(trial, self.X_train, self.y_train, self.X_test, self.y_test),
+[MFLOG|0|2026-01-25T14:47:02.698944Z|runtime|c4463b9f-ff68-43f0-99a3-017570ce058f]                                        ^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:47:02.698957Z|runtime|93f290bc-381c-4823-876f-8023dfbcd13b]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/flowspec.py", line 599, in __getattr__
+[MFLOG|0|2026-01-25T14:47:02.698971Z|runtime|14ace870-d607-4035-a892-e0d62a1169ba]    raise AttributeError("Flow %s has no attribute '%s'" % (self.name, name))
+[MFLOG|0|2026-01-25T14:47:02.698984Z|runtime|c3d797cf-d4d7-4800-8ec1-47713e42905b]AttributeError: Flow BikeSharingDemandFlow has no attribute 'X_train'
+[MFLOG|0|2026-01-25T14:47:02.698997Z|runtime|3625c78a-5c7d-4512-83d2-378a25f36761][W 2026-01-25 11:47:02,590] Trial 0 failed with value None.

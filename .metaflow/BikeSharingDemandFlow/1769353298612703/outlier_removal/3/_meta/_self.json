@@ -1,0 +1,1 @@
+{"run_number": "1769353298612703", "step_name": "outlier_removal", "task_id": "3", "flow_id": "BikeSharingDemandFlow", "user_name": "nasserboan", "tags": [], "system_tags": ["runtime:dev", "metaflow_version:2.19.17", "python_version:3.12.12", "user:nasserboan"], "ts_epoch": 1769353300896}

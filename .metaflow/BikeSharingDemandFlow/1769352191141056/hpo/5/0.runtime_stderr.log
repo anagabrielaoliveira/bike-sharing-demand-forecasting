@@ -1,0 +1,41 @@
+[MFLOG|0|2026-01-25T14:43:20.113797Z|runtime|1947b62b-96dc-4e10-87af-70c82f672775][I 2026-01-25 11:43:20,113] A new study created in memory with name: no-name-b6d03479-f858-4a79-86d0-c1261c8c212d
+[MFLOG|0|2026-01-25T14:43:20.114456Z|runtime|932ff5fe-6c67-4cc4-a8bc-c1fe9708fcf0]<flow BikeSharingDemandFlow step hpo> failed:
+[MFLOG|0|2026-01-25T14:43:20.117654Z|runtime|b6208fca-a9a6-4e75-9089-df2dfbf11b7c]    Internal error
+[MFLOG|0|2026-01-25T14:43:20.118410Z|runtime|f462cbf8-5182-4fa5-b254-2173e4a7923a]Traceback (most recent call last):
+[MFLOG|0|2026-01-25T14:43:20.118445Z|runtime|6a501f3b-7034-4968-86cf-3754a1666729]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli.py", line 727, in main
+[MFLOG|0|2026-01-25T14:43:20.118468Z|runtime|237efbde-dcbe-4641-8137-db21c9df1881]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2026-01-25T14:43:20.118488Z|runtime|ef80fad5-ab09-4156-9e1b-00921723abd8]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2026-01-25T14:43:20.118512Z|runtime|f948aed4-9de3-4b37-a657-4a51e5c0055d]    return self.main(args, kwargs)
+[MFLOG|0|2026-01-25T14:43:20.226117Z|runtime|1c4a79c7-e086-463b-878d-0fe90a9cfb30]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:43:20.226444Z|runtime|ea8fb22a-bf9c-4668-b87b-da77778da0c6]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2026-01-25T14:43:20.226565Z|runtime|43710f0c-c830-4f85-abd9-0b57c3e58032]    rv = self.invoke(ctx)
+[MFLOG|0|2026-01-25T14:43:20.226693Z|runtime|00c7894d-b586-44e8-921c-2d2bf21ed26a]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:43:20.226751Z|runtime|37615bb5-9fb5-4bf4-b259-0734279508e6]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli_components/utils.py", line 69, in invoke
+[MFLOG|0|2026-01-25T14:43:20.226814Z|runtime|38dbe8c4-4fe0-4f81-9fdc-e3fbf41df422]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2026-01-25T14:43:20.226950Z|runtime|f2d95713-184e-457a-8838-18285dc7b2a9]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:43:20.227019Z|runtime|d96c8a44-9a4a-45ab-a3e8-77eba93feaf1]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2026-01-25T14:43:20.227158Z|runtime|aff6cb7e-a9be-436c-bc27-fc8b6831d452]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2026-01-25T14:43:20.227190Z|runtime|18a79294-feef-43d7-8e22-c36ae89d5f05]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:43:20.227213Z|runtime|3c5b675c-f20a-4d33-b78b-7540efb42e86]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2026-01-25T14:43:20.227233Z|runtime|6fab98c1-124e-4b97-b528-b54607eccabd]    return callback(args, kwargs)
+[MFLOG|0|2026-01-25T14:43:20.227249Z|runtime|b436de4e-6907-48e2-8252-11e4db506ac6]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:43:20.227264Z|runtime|c80a5c49-4c0d-43f5-961a-d5d637500d3d]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/tracing/__init__.py", line 27, in wrapper_func
+[MFLOG|0|2026-01-25T14:43:20.227633Z|runtime|0cc2af20-e55c-4e17-aa94-80b1c4dc246d]    return func(args, kwargs)
+[MFLOG|0|2026-01-25T14:43:20.227875Z|runtime|e02bf4bb-d179-4c96-9326-92c49b2a9ff9]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:43:20.227943Z|runtime|f1545a0b-ffe2-4ee9-bfd5-bb009bb25bb8]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2026-01-25T14:43:20.227968Z|runtime|ab8a6e3f-2922-466d-ab43-90125e921072]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2026-01-25T14:43:20.227990Z|runtime|48cc5372-9942-4d52-8ca4-7f707c661251]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:43:20.228007Z|runtime|156839fe-e784-49b1-a958-655c07edd326]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli_components/step_cmd.py", line 171, in step
+[MFLOG|0|2026-01-25T14:43:20.228022Z|runtime|e71c76f0-4726-42ea-bddc-6e758ee79ba7]    task.run_step(
+[MFLOG|0|2026-01-25T14:43:20.228148Z|runtime|2290d751-7223-45ed-8d09-6f5d56b3e738]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 899, in run_step
+[MFLOG|0|2026-01-25T14:43:20.228288Z|runtime|8731bdea-83e8-4494-8c50-e44c41cae06a]    self._exec_step_function(step_func, orig_step_func)
+[MFLOG|0|2026-01-25T14:43:20.228335Z|runtime|078ebd06-737a-4db9-9f75-1361796bca5a]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 147, in _exec_step_function
+[MFLOG|0|2026-01-25T14:43:20.228438Z|runtime|33f4067e-f862-4a8d-9c84-438af08dfbcf]    raise raised_exception
+[MFLOG|0|2026-01-25T14:43:20.228511Z|runtime|6eeaeaf4-5379-4179-9682-37836af2563f]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 113, in _exec_step_function
+[MFLOG|0|2026-01-25T14:43:20.228564Z|runtime|53101b6b-43c3-4de9-8f9c-7bf745d941e4]    step_function()
+[MFLOG|0|2026-01-25T14:43:20.228959Z|runtime|98137615-9727-4df9-97d6-ed74e108ac78]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/flow.py", line 102, in hpo
+[MFLOG|0|2026-01-25T14:43:20.229616Z|runtime|daa83006-885f-4f4f-8b0d-e5d58940b0bd]    lgbm_study = study.optimize(
+[MFLOG|0|2026-01-25T14:43:20.229651Z|runtime|b35f1b39-4798-4f3a-bf8c-b3e9536d6905]                 ^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:43:20.229673Z|runtime|3e9c2247-7e5b-4da9-9915-8643be06e8a8]TypeError: Study.optimize() got an unexpected keyword argument 'show_progress'
+[MFLOG|0|2026-01-25T14:43:20.229693Z|runtime|215351cf-1acb-428c-8908-d854a4a701bc]
+[MFLOG|0|2026-01-25T14:43:20.229972Z|runtime|e666a57f-4995-4f2e-9785-336e06f1c081]Task failed.

@@ -1,0 +1,43 @@
+[MFLOG|0|2026-01-24T19:56:22.551232Z|runtime|217498dd-f96c-423c-9873-865fcedf0c37]<flow BikeSharingDemandFlow step preprocess> failed:
+[MFLOG|0|2026-01-24T19:56:22.560346Z|runtime|be254edd-32d6-44cb-83f3-75bc5245ad97]    Internal error
+[MFLOG|0|2026-01-24T19:56:22.561115Z|runtime|77801ef4-6242-4766-92d1-58047772dd95]Traceback (most recent call last):
+[MFLOG|0|2026-01-24T19:56:22.561243Z|runtime|7e6f0b56-4603-415f-9f6d-c6943c00b481]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli.py", line 727, in main
+[MFLOG|0|2026-01-24T19:56:22.561271Z|runtime|a0aa0e0f-2dba-400c-b010-38e1b42c497b]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2026-01-24T19:56:22.561300Z|runtime|a14fe74c-0db0-4df2-8613-1ffb5436085b]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2026-01-24T19:56:22.561331Z|runtime|53e0fb26-15d2-4913-af77-960d655786d3]    return self.main(args, kwargs)
+[MFLOG|0|2026-01-24T19:56:22.561352Z|runtime|599af5b8-6445-4881-887b-155950325046]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T19:56:22.561370Z|runtime|173613d0-511c-4819-8072-5e6c6e59221e]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2026-01-24T19:56:22.561390Z|runtime|441de662-985e-4200-8977-9fd05a07a610]    rv = self.invoke(ctx)
+[MFLOG|0|2026-01-24T19:56:22.561407Z|runtime|d2c2446b-c1e0-41f0-883d-5a564654067d]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T19:56:22.561424Z|runtime|3d246cf2-b850-46a7-b7b3-c96a57a61942]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli_components/utils.py", line 69, in invoke
+[MFLOG|0|2026-01-24T19:56:22.561442Z|runtime|e9f930ce-d3a8-4514-8d30-2bd16d0e099e]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2026-01-24T19:56:22.561458Z|runtime|b470fb86-ecac-4da0-b41c-e52e56dec191]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T19:56:22.561474Z|runtime|7ec2d72a-29f5-4f94-b368-269420d7e0f1]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2026-01-24T19:56:22.561619Z|runtime|2ab40263-4a98-4a2f-bdd4-8ba28ac48e36]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2026-01-24T19:56:22.561735Z|runtime|18de412e-bfda-4476-a9a0-1a94c715d0ba]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T19:56:22.561766Z|runtime|abca3d32-6867-43eb-81b0-3fb34d5718c7]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2026-01-24T19:56:22.561789Z|runtime|27bf362c-1e7e-485f-aaef-a76f9ee96537]    return callback(args, kwargs)
+[MFLOG|0|2026-01-24T19:56:22.561809Z|runtime|a7078b81-e55e-4d86-9c64-39eca51681f2]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T19:56:22.561828Z|runtime|4e70e9e4-b5b0-4778-9b1a-a3050494e921]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/tracing/__init__.py", line 27, in wrapper_func
+[MFLOG|0|2026-01-24T19:56:22.561850Z|runtime|5ee54761-29d3-46a6-a70d-24f119d022d0]    return func(args, kwargs)
+[MFLOG|0|2026-01-24T19:56:22.561868Z|runtime|6cd89d7f-5396-44eb-b218-67a86c88b211]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T19:56:22.561886Z|runtime|01495301-5504-4326-9962-efea1bd38836]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2026-01-24T19:56:22.561907Z|runtime|79876db7-4ab6-42e1-96f4-bf906f9361d3]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2026-01-24T19:56:22.641949Z|runtime|d2eaeddf-e0d9-4245-847d-80261a821416]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T19:56:22.642052Z|runtime|451a52fe-70fa-495e-b010-58d25ebc54d5]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli_components/step_cmd.py", line 171, in step
+[MFLOG|0|2026-01-24T19:56:22.642077Z|runtime|db0f3f04-c3a2-4802-aac3-54afa005b760]    task.run_step(
+[MFLOG|0|2026-01-24T19:56:22.642095Z|runtime|2081f360-ee50-49a2-855e-c07157d464bf]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 899, in run_step
+[MFLOG|0|2026-01-24T19:56:22.642114Z|runtime|1329e848-ced1-4446-9848-34b73e977ba0]    self._exec_step_function(step_func, orig_step_func)
+[MFLOG|0|2026-01-24T19:56:22.642132Z|runtime|8c85cdc2-a294-4415-a10d-83e5f3fb2422]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 147, in _exec_step_function
+[MFLOG|0|2026-01-24T19:56:22.642151Z|runtime|0b7a3179-8a97-4e4f-9591-062251c0e9fd]    raise raised_exception
+[MFLOG|0|2026-01-24T19:56:22.642171Z|runtime|08140c6a-fb73-4dc4-a488-30d0d2ff10bf]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 113, in _exec_step_function
+[MFLOG|0|2026-01-24T19:56:22.642188Z|runtime|bd0dc2b8-5d93-406c-826d-c553d62921f6]    step_function()
+[MFLOG|0|2026-01-24T19:56:22.642206Z|runtime|d5b1f9bf-f743-4639-a2f4-84e69015b93d]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/flow.py", line 35, in preprocess
+[MFLOG|0|2026-01-24T19:56:22.642223Z|runtime|64f9d47e-7193-44a7-a430-0bf11eeb00bc]    train_data = update_workingday_and_holiday(train_data)
+[MFLOG|0|2026-01-24T19:56:22.642242Z|runtime|79000c2a-df7f-4838-ba81-437bf236cdbd]                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T19:56:22.642259Z|runtime|a8dd3660-5354-4585-81b3-faff3e50deb6]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/preprocess/time_features.py", line 79, in update_workingday_and_holiday
+[MFLOG|0|2026-01-24T19:56:22.642274Z|runtime|ef07ef93-d075-4f22-8ef9-1404d0ee1fb7]    df = df.copy()
+[MFLOG|0|2026-01-24T19:56:22.642291Z|runtime|a4a1f7c9-a3a4-4039-a1e0-8e41562a5c99]         ^^
+[MFLOG|0|2026-01-24T19:56:22.642308Z|runtime|19b0ef77-f9f8-4921-951d-1694e2129d43]UnboundLocalError: cannot access local variable 'df' where it is not associated with a value
+[MFLOG|0|2026-01-24T19:56:22.642329Z|runtime|dfe46eae-6e33-4ff0-b58c-4bdc821b0bfe]
+[MFLOG|0|2026-01-24T19:56:22.642699Z|runtime|7b95d469-b614-4d95-a779-0010bddc03e6]Task failed.

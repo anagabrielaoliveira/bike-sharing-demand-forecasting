@@ -1,0 +1,15 @@
+[project]
+name = "bike-sharing-demand-forecasting"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "lightgbm>=4.6.0",
+    "loguru>=0.7.3",
+    "metaflow>=2.19.17",
+    "optuna>=4.7.0",
+    "pandas>=3.0.0",
+    "scikit-learn>=1.8.0",
+    "seaborn>=0.13.2",
+]

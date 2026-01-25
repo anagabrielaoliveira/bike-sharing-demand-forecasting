@@ -1,0 +1,29 @@
+[MFLOG|0|2026-01-25T14:48:39.449048Z|runtime|b420e86a-8bb9-4222-a9e9-0739608a8acb][LightGBM] [Warning] min_data_in_leaf is set=74, min_child_samples=20 will be ignored. Current value: min_data_in_leaf=74
+[MFLOG|0|2026-01-25T14:48:39.563279Z|runtime|c42f04b9-e6f2-4c37-8ba9-7938e0d5ca2b][W 2026-01-25 11:48:39,447] Trial 0 failed with parameters: {'num_leaves': 376, 'max_depth': 15, 'min_data_in_leaf': 74, 'learning_rate': 0.015751320499779727, 'colsample_bytree': 0.1982177084203147, 'n_estimators': 240} because of the following error: ValueError('DataFrame for label cannot have multiple columns').
+[MFLOG|0|2026-01-25T14:48:39.563298Z|runtime|ad0fea1c-3c23-4415-a966-86e80ccda985]Traceback (most recent call last):
+[MFLOG|0|2026-01-25T14:48:39.563313Z|runtime|91c54af5-6b35-4539-9bd8-f29e21f6e351]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/optuna/study/_optimize.py", line 206, in _run_trial
+[MFLOG|0|2026-01-25T14:48:39.563330Z|runtime|15a9c1fd-5d3b-4bba-9c81-9bbd14b994cd]    value_or_values = func(trial)
+[MFLOG|0|2026-01-25T14:48:39.563345Z|runtime|3bfb5063-7bc4-4b4b-9916-71a9240f061a]                      ^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:48:39.563359Z|runtime|b1559d5b-2e84-4b37-85f9-f3826f56791f]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/flow.py", line 117, in <lambda>
+[MFLOG|0|2026-01-25T14:48:39.563372Z|runtime|66cba170-17bf-4b0a-89d1-5f62cf6239e5]    lambda trial: lgbm_objective(trial, self.X_train, self.y_train, self.X_test, self.y_test),
+[MFLOG|0|2026-01-25T14:48:39.563388Z|runtime|62c0ca7f-1d3d-4998-9d7b-904db5e712ee]                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:48:39.563402Z|runtime|c713c235-4af0-4d2d-bddc-68fe7f49c3a6]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/hpo/optuna_hpo.py", line 19, in lgbm_objective
+[MFLOG|0|2026-01-25T14:48:39.563416Z|runtime|2da37cb6-8a54-4ca6-b1f8-e38c8fad3432]    model.fit(X_train, y_train)
+[MFLOG|0|2026-01-25T14:48:39.563431Z|runtime|60049a05-1c84-4ac6-91f4-8177dca3c41c]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py", line 1398, in fit
+[MFLOG|0|2026-01-25T14:48:39.563444Z|runtime|fd5b7dff-d6e5-421c-90cf-b536b5d098d3]    super().fit(
+[MFLOG|0|2026-01-25T14:48:39.563459Z|runtime|ec1c1afd-553f-4720-b7fa-f72e829256e7]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py", line 1049, in fit
+[MFLOG|0|2026-01-25T14:48:39.563473Z|runtime|f470bb0d-f865-4d77-934d-ab68bcf4edfc]    self._Booster = train(
+[MFLOG|0|2026-01-25T14:48:39.563487Z|runtime|8678a08a-6ff1-4acf-85c1-589db613ad19]                    ^^^^^^
+[MFLOG|0|2026-01-25T14:48:39.563502Z|runtime|4130b32c-fb73-4a63-b623-7f189c4970ab]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/lightgbm/engine.py", line 297, in train
+[MFLOG|0|2026-01-25T14:48:39.563515Z|runtime|1e3eeb06-0fd8-469c-aba8-81906d8f1833]    booster = Booster(params=params, train_set=train_set)
+[MFLOG|0|2026-01-25T14:48:39.563528Z|runtime|99909d28-f35d-4264-b422-962663672c81]              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:48:39.563541Z|runtime|268b87fc-954b-46c6-8113-8e6401774ce3]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/lightgbm/basic.py", line 3656, in __init__
+[MFLOG|0|2026-01-25T14:48:39.563554Z|runtime|afdc2e78-f920-47bb-8057-34a45d65c6e4]    train_set.construct()
+[MFLOG|0|2026-01-25T14:48:39.563570Z|runtime|7d12f781-5d52-4a9f-b19e-965ae6996fb3]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/lightgbm/basic.py", line 2590, in construct
+[MFLOG|0|2026-01-25T14:48:39.563583Z|runtime|5ae5dd82-45f4-4547-9e7f-691303e7ebde]    self._lazy_init(
+[MFLOG|0|2026-01-25T14:48:39.563597Z|runtime|4bf82a4b-303e-4a7e-8bf3-8f5a9d3648bf]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/lightgbm/basic.py", line 2209, in _lazy_init
+[MFLOG|0|2026-01-25T14:48:39.563611Z|runtime|bb55123b-d958-4720-83e8-537d249472d6]    self.set_label(label)
+[MFLOG|0|2026-01-25T14:48:39.563625Z|runtime|370da915-6612-4252-aa60-6ce26dd65a9a]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/lightgbm/basic.py", line 3072, in set_label
+[MFLOG|0|2026-01-25T14:48:39.563638Z|runtime|5cc74beb-6ef9-437f-b2eb-7d016b6e3ca9]    raise ValueError("DataFrame for label cannot have multiple columns")
+[MFLOG|0|2026-01-25T14:48:39.563652Z|runtime|ddab8ca4-5c56-41f6-a88c-9def47ab6ec9]ValueError: DataFrame for label cannot have multiple columns
+[MFLOG|0|2026-01-25T14:48:39.563665Z|runtime|8347c46a-f83e-4d5a-812d-ed8d2e83b315][W 2026-01-25 11:48:39,448] Trial 0 failed with value None.

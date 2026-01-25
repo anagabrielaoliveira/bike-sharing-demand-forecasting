@@ -1,0 +1,42 @@
+[MFLOG|0|2026-01-24T21:04:42.332853Z|runtime|83b0b948-ef50-4545-9c74-a23c6251c2c7]<flow BikeSharingDemandFlow step train_baseline_model> failed:
+[MFLOG|0|2026-01-24T21:04:42.337275Z|runtime|c8c91a74-63f3-486f-b727-9971798f9149]    Internal error
+[MFLOG|0|2026-01-24T21:04:42.338080Z|runtime|e3e290f3-e443-4526-9648-abaa3e7f7779]Traceback (most recent call last):
+[MFLOG|0|2026-01-24T21:04:42.338117Z|runtime|2bfd2612-2b03-45b6-baaf-439a141a3b64]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli.py", line 727, in main
+[MFLOG|0|2026-01-24T21:04:42.338143Z|runtime|9ccc047b-1c42-4185-92e8-087be5bfa01b]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2026-01-24T21:04:42.338165Z|runtime|649dbb7b-e935-4f1f-be85-afa7f01f87b8]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2026-01-24T21:04:42.338188Z|runtime|f7b20551-b342-4de8-b9d5-eaa48c2e0218]    return self.main(args, kwargs)
+[MFLOG|0|2026-01-24T21:04:42.423404Z|runtime|aa1f9678-27c3-4c4a-a7d6-36fda6487eeb]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T21:04:42.423515Z|runtime|8054db12-4538-447b-89d9-cfd11a380d80]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2026-01-24T21:04:42.423543Z|runtime|e5a179ba-f8b4-4dab-86e3-477957409d8b]    rv = self.invoke(ctx)
+[MFLOG|0|2026-01-24T21:04:42.423569Z|runtime|1ad7d657-9139-48d4-896f-344638eb2498]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T21:04:42.423590Z|runtime|eeaa6349-07cf-44c4-beb0-a5645aaa3513]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli_components/utils.py", line 69, in invoke
+[MFLOG|0|2026-01-24T21:04:42.423613Z|runtime|8c2167f6-987c-4241-8196-ea37e60547af]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2026-01-24T21:04:42.423630Z|runtime|abbfcf93-0fb7-44e4-a0c2-17df015ee1ab]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T21:04:42.423648Z|runtime|1dd750eb-ab3b-43e7-a0d8-6fa06ed5fc38]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2026-01-24T21:04:42.423664Z|runtime|bfbfef84-2223-4aef-8ea8-cd8e6710cbe8]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2026-01-24T21:04:42.423683Z|runtime|23b03219-fc5f-482d-a972-88fedda1e0a6]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T21:04:42.423699Z|runtime|87463ac5-2ade-4b48-b0da-6a2b0d406148]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2026-01-24T21:04:42.423714Z|runtime|df455da0-57ef-4cdc-b05c-964e1d6b8211]    return callback(args, kwargs)
+[MFLOG|0|2026-01-24T21:04:42.423729Z|runtime|b014b94a-d819-4230-8ea8-ccba5f75f681]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T21:04:42.423746Z|runtime|0d9ae337-24d5-436f-bef9-c06ae6b73293]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/tracing/__init__.py", line 27, in wrapper_func
+[MFLOG|0|2026-01-24T21:04:42.423764Z|runtime|1dd2a74e-e4d3-4070-90d1-e3321782b092]    return func(args, kwargs)
+[MFLOG|0|2026-01-24T21:04:42.423782Z|runtime|4415e58f-5167-42b7-9caf-746dc5ac0d7a]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T21:04:42.423797Z|runtime|eac2ec65-a5b7-4d95-8ecf-f48c002ff1a8]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2026-01-24T21:04:42.423812Z|runtime|e1fd765d-69e4-455c-b105-a1dd4b897917]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2026-01-24T21:04:42.423827Z|runtime|435fcc58-20b7-4af2-91df-3a65f29c082a]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T21:04:42.423842Z|runtime|498d655a-3d53-4f9a-a780-af36a89bd58a]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli_components/step_cmd.py", line 171, in step
+[MFLOG|0|2026-01-24T21:04:42.423863Z|runtime|399dd2ae-8d99-4163-b010-79c3d508946e]    task.run_step(
+[MFLOG|0|2026-01-24T21:04:42.423882Z|runtime|585b6f0e-3b48-4e15-ae6e-5200fcbb72f9]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 899, in run_step
+[MFLOG|0|2026-01-24T21:04:42.423898Z|runtime|4d4b73f7-f898-492e-8405-c34655208944]    self._exec_step_function(step_func, orig_step_func)
+[MFLOG|0|2026-01-24T21:04:42.423913Z|runtime|66e25a3e-9204-4a81-ab70-92bbe009ed53]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 147, in _exec_step_function
+[MFLOG|0|2026-01-24T21:04:42.423935Z|runtime|2dd1d71d-0b1a-48d7-821e-bef0402742ab]    raise raised_exception
+[MFLOG|0|2026-01-24T21:04:42.423952Z|runtime|3f604f0a-44df-42b5-9f76-e5dd19d28a3d]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 113, in _exec_step_function
+[MFLOG|0|2026-01-24T21:04:42.423969Z|runtime|2ab5f1b0-b7b8-484c-a379-89745a3711c1]    step_function()
+[MFLOG|0|2026-01-24T21:04:42.423986Z|runtime|d46d3c8b-6474-4eec-8a59-e034aaa639a9]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/flow.py", line 81, in train_baseline_model
+[MFLOG|0|2026-01-24T21:04:42.424010Z|runtime|4519fa65-f738-4bf9-8ae0-d50a17aed218]    save_baseline_model_info(model_name='baseline_model', model=model, rmsle=rmsle)
+[MFLOG|0|2026-01-24T21:04:42.424027Z|runtime|a84f015a-98b3-47e7-9cd8-d592e36121ec]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/train/baseline_model.py", line 58, in save_baseline_model_info
+[MFLOG|0|2026-01-24T21:04:42.424044Z|runtime|5fbeebd8-3cf3-46a4-9d9c-edeaaf367b6a]    with open(f'data/models/{model_name}_{datetime.now().strftime("%Y%m%d_%H%M")}.json', 'w') as f:
+[MFLOG|0|2026-01-24T21:04:42.424061Z|runtime|bbd3717f-f7e5-4bc1-877d-9ca7d4afa1e3]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T21:04:42.424077Z|runtime|ca3af285-0769-438f-87c9-f9f5ef679ddc]FileNotFoundError: [Errno 2] No such file or directory: 'data/models/baseline_model_20260124_1804.json'
+[MFLOG|0|2026-01-24T21:04:42.424091Z|runtime|26c35228-8d6a-42d4-8781-5aeb6a9827fd]
+[MFLOG|0|2026-01-24T21:04:42.424406Z|runtime|619c3093-d4dd-44a3-b615-d88f6654d85a]Task failed.
