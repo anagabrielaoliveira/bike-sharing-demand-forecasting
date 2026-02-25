@@ -1,5 +1,5 @@
 from metaflow import FlowSpec, IncludeFile, step, Parameter
-from .preprocess import (
+from preprocess import (
     OutlierRemoval,
     create_time_features,
     create_peak_feature,
@@ -8,14 +8,14 @@ from .preprocess import (
     update_workingday_and_holiday
 )
 
-from .train import (
+from train import (
     train_rf_model,
     evaluate_model,
     save_baseline_model_info
 )
 
-from .eval import EvalResults
-from .hpo import OptunaHPO
+from eval import EvalResults
+from hpo import OptunaHPO
 from sklearn.model_selection import train_test_split
 from config.config import QUANTITATIVE_COLS, PEAK_HOURS, SPECIAL_HOLIDAYS, Y_COLS, RANDOM_STATE
 import pandas as pd
@@ -121,3 +121,6 @@ class BikeSharingDemandFlow(FlowSpec):
     @step
     def end(self):
         pass
+
+if __name__ == "__main__":
+    BikeSharingDemandFlow()
