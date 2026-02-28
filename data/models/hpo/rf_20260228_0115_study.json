@@ -1,0 +1,11 @@
+{
+    "model_name": "rf",
+    "model_params": {
+        "n_estimators": 1021,
+        "max_depth": 13,
+        "min_samples_leaf": 4,
+        "max_features": 0.6599641068895281
+    },
+    "rmsle": 0.3227394682792277,
+    "n_trials": 10
+}

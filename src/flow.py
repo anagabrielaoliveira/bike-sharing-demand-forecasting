@@ -19,6 +19,7 @@ from src.hpo import OptunaHPO
 from sklearn.model_selection import train_test_split
 from config.config import QUANTITATIVE_COLS, PEAK_HOURS, SPECIAL_HOLIDAYS, Y_COLS, RANDOM_STATE
 import pandas as pd
+import numpy as np
 
 class BikeSharingDemandFlow(FlowSpec):
 
@@ -29,6 +30,7 @@ class BikeSharingDemandFlow(FlowSpec):
 
     @step
     def start(self):
+        
         self.train_data = pd.read_csv('data/train.csv')
         
         # Convert datetime column to datetime type and set as index (matching notebook)
@@ -75,15 +77,23 @@ class BikeSharingDemandFlow(FlowSpec):
 
     @step
     def train_baseline_model(self):
+
+        #target_data = np.log1p(self.train_data[Y_COLS])  # Log-transform the target variable
+        
+        #Only 'count' as target variable for baseline model
+        target_data = np.log1p(self.train_data['count'])
+
+        features_data = self.train_data.drop(columns=Y_COLS)
+
         X_train, X_test, y_train, y_test = train_test_split(
-            self.train_data.drop(columns=Y_COLS),
-            self.train_data[Y_COLS],
+            features_data,
+            target_data,
             test_size=0.2,
             random_state=RANDOM_STATE
         )
         model = train_rf_model(X_train, y_train)
-        mape = evaluate_model(model, X_test, y_test)
-        save_baseline_model_info(model_name='baseline_model', model=model, mape=mape)
+        rmsle = evaluate_model(model, X_test, y_test)
+        save_baseline_model_info(model_name='baseline_model', model=model, rmsle=rmsle)
 
         self.X_train = X_train
         self.X_test = X_test
@@ -110,17 +120,14 @@ class BikeSharingDemandFlow(FlowSpec):
     @step
     def evaluate_models(self):
         eval_results = EvalResults(
-            hpo_results_folder='data/models/hpo',
-            baseline_results_path='data/models/baseline_model_20260125_1257.json'
+            hpo_results_folder=f'data/models/hpo/', # run_id is a unique identifier for each run of the flow, provided by Metaflow
+            baseline_results_path='data/models/'
         )
         best_model = eval_results.evaluate_models()
-        print(pd.DataFrame(best_model))
+        print(f"The best model is: {pd.DataFrame([best_model])}")
         self.best_model = best_model
         self.next(self.end)
 
     @step
     def end(self):
         pass
-
-if __name__ == "__main__":
-    BikeSharingDemandFlow()

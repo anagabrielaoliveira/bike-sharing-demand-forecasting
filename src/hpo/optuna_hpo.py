@@ -1,8 +1,8 @@
 from sklearn.ensemble import RandomForestRegressor
 from xgboost import XGBRegressor
 from lightgbm import LGBMRegressor
-from sklearn.metrics import mean_absolute_percentage_error
-from sklearn.multioutput import MultiOutputRegressor
+#from sklearn.metrics import mean_absolute_percentage_error
+#from sklearn.multioutput import MultiOutputRegressor
 from config.config import RANDOM_STATE
 import numpy as np
 import optuna
@@ -30,22 +30,27 @@ def lgbm_objective(trial, X_train, y_train, x_test, y_test):
     Returns:
     mape : float
         The mean absolute percentage error of the model
+    rmsle: 
+        The root mean squared logarithmic error of the model
     """
     params = {
-        'objective': 'regression',
-        'num_leaves': trial.suggest_int('num_leaves', 2, 1e3),
+        #'objective': 'regression',
+        'num_leaves': trial.suggest_int('num_leaves', 2, 200),
         'max_depth': trial.suggest_int('max_depth', 3, 15),
         'min_data_in_leaf': trial.suggest_int('min_data_in_leaf', 1, 100),
         'learning_rate': trial.suggest_float('learning_rate', 1e-3, 0.1, log=True),
         'colsample_bytree': trial.suggest_float("colsample_bytree", 0.05, 1.0),
-        'n_estimators': trial.suggest_int('n_estimators', 10, 100),
+        'n_estimators': trial.suggest_int('n_estimators', 10, 1e3),
         'random_state': RANDOM_STATE
     }
-    model = MultiOutputRegressor(LGBMRegressor(**params, verbosity=-1))
+    model = LGBMRegressor(**params, verbosity=-1)
     model.fit(X_train, y_train)
-    y_pred = model.predict(x_test)
-    mape = mean_absolute_percentage_error(y_test, y_pred)
-    return mape
+    y_pred_log = model.predict(x_test)
+
+    rmsle = np.sqrt(np.mean((y_test - y_pred_log) ** 2))
+    return rmsle
+    # mape = mean_absolute_percentage_error(y_test, y_pred)
+    # return mape
 
 def xgb_objective(trial, X_train, y_train, x_test, y_test):
     """
@@ -65,21 +70,27 @@ def xgb_objective(trial, X_train, y_train, x_test, y_test):
     Returns:
     mape : float
         The mean absolute percentage error of the model
+    rmsle: 
+        The root mean squared logarithmic error of the model
     """
+
     params = {
-        'objective': 'reg:squaredlogerror',
-        'n_estimators': trial.suggest_int('n_estimators', 10, 100),
+       # 'objective': 'reg:squarederror',
+        'n_estimators': trial.suggest_int('n_estimators', 200, 2e3),
         'max_depth': trial.suggest_int('max_depth', 3, 15),
         'learning_rate': trial.suggest_float('learning_rate', 1e-3, 0.1, log=True),
-        'subsample': trial.suggest_float('subsample', 0.05, 1.0),
-        'colsample_bytree': trial.suggest_float("colsample_bytree", 0.05, 1.0),
+        'subsample': trial.suggest_float('subsample', 0.5, 1.0),
+        'colsample_bytree': trial.suggest_float("colsample_bytree", 0.5, 1.0),
         'random_state': RANDOM_STATE
     }
-    model = MultiOutputRegressor(XGBRegressor(**params, verbosity=0))
+    model = XGBRegressor(**params, verbosity=0)
     model.fit(X_train, y_train)
-    y_pred = model.predict(x_test)
-    mape = mean_absolute_percentage_error(y_test, y_pred)
-    return mape
+    y_pred_log = model.predict(x_test)
+
+    rmsle = np.sqrt(np.mean((y_test - y_pred_log) ** 2))
+    return rmsle
+    # mape = mean_absolute_percentage_error(y_test, y_pred)
+    # return mape
 
 def rf_objective(trial, X_train, y_train, x_test, y_test):
     """
@@ -99,17 +110,24 @@ def rf_objective(trial, X_train, y_train, x_test, y_test):
     Returns:
     mape : float
         The mean absolute percentage error of the model
+    rmsle: 
+        The root mean squared logarithmic error of the model
     """
     params = {
-        'n_estimators': trial.suggest_int('n_estimators', 10, 100),
+        'n_estimators': trial.suggest_int('n_estimators', 200, 2000),
         'max_depth': trial.suggest_int('max_depth', 3, 15),
+        'min_samples_leaf': trial.suggest_int('min_samples_leaf', 1, 20),
+        'max_features': trial.suggest_float('max_features', 0.3, 1.0),
         'random_state': RANDOM_STATE
     }
-    model = MultiOutputRegressor(RandomForestRegressor(**params))
+    model = RandomForestRegressor(**params)
     model.fit(X_train, y_train)
-    y_pred = model.predict(x_test)
-    mape = mean_absolute_percentage_error(y_test, y_pred)
-    return mape
+    y_pred_log = model.predict(x_test)
+
+    rmsle = np.sqrt(np.mean((y_test - y_pred_log) ** 2))
+    return rmsle
+    # mape = mean_absolute_percentage_error(y_test, y_pred)
+    # return mape
 
 class OptunaHPO:
     def __init__(self, X_train, y_train, x_test, y_test):
@@ -152,12 +170,12 @@ class OptunaHPO:
         model_name : str
             The name of the model
         """
-        os.makedirs('data/models/hpo', exist_ok=True)
+        os.makedirs(f'data/models/hpo', exist_ok=True)
         with open(f'data/models/hpo/{model_name}_{datetime.now().strftime("%Y%m%d_%H%M")}_study.json', 'w') as f:
             json.dump({
                 'model_name': model_name,
                 'model_params': study.best_trial.params,
-                'mape': study.best_value,
+                'rmsle': study.best_value,
                 'n_trials': len(study.trials)
             }, f, indent=4)
 

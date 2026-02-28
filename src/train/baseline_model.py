@@ -3,6 +3,7 @@ from sklearn.metrics import mean_absolute_percentage_error
 from datetime import datetime
 import json
 import os
+import numpy as np
 
 def train_rf_model(X, y):
     """
@@ -39,10 +40,12 @@ def evaluate_model(model, X, y_true):
     mape : float
         The mean absolute percentage error of the model
     """
-    y_pred = model.predict(X)
-    return mean_absolute_percentage_error(y_true, y_pred)
+    y_pred_log = model.predict(X)
 
-def save_baseline_model_info(model_name, model, mape):
+    rmsle = np.sqrt(np.mean((y_true - y_pred_log) ** 2))
+    return rmsle
+
+def save_baseline_model_info(model_name, model, rmsle):
     """
     This function is used to save the baseline model information.
 
@@ -61,5 +64,5 @@ def save_baseline_model_info(model_name, model, mape):
             'model_name': model_name,
             'model_type': model.__class__.__name__,
             'model_params': model.get_params(),
-            'mape': mape
-        }, f)
+            'rmsle': rmsle
+        }, f, indent=4)
