@@ -11,6 +11,7 @@ from optuna.pruners import HyperbandPruner
 import json
 import os
 from datetime import datetime
+import joblib
 
 def lgbm_objective(trial, X_train, y_train, x_test, y_test):
     """
@@ -34,13 +35,14 @@ def lgbm_objective(trial, X_train, y_train, x_test, y_test):
         The root mean squared logarithmic error of the model
     """
     params = {
-        #'objective': 'regression',
-        'num_leaves': trial.suggest_int('num_leaves', 2, 200),
-        'max_depth': trial.suggest_int('max_depth', 3, 15),
-        'min_data_in_leaf': trial.suggest_int('min_data_in_leaf', 1, 100),
+        #'objective': 'huber',
+        'num_leaves': trial.suggest_int('num_leaves', 15, 100),
+        #'max_depth': trial.suggest_int('max_depth', 3, 10),
+        'min_data_in_leaf': trial.suggest_int('min_data_in_leaf', 20, 120),
         'learning_rate': trial.suggest_float('learning_rate', 1e-3, 0.1, log=True),
-        'colsample_bytree': trial.suggest_float("colsample_bytree", 0.05, 1.0),
-        'n_estimators': trial.suggest_int('n_estimators', 10, 1e3),
+        'colsample_bytree': trial.suggest_float("colsample_bytree", 0.5, 1.0),
+        'n_estimators': trial.suggest_int('n_estimators', 100, 1000),
+        #"alpha": trial.suggest_float("alpha", 0.7, 0.99),
         'random_state': RANDOM_STATE
     }
     model = LGBMRegressor(**params, verbosity=-1)
@@ -48,6 +50,9 @@ def lgbm_objective(trial, X_train, y_train, x_test, y_test):
     y_pred_log = model.predict(x_test)
 
     rmsle = np.sqrt(np.mean((y_test - y_pred_log) ** 2))
+
+    trial.set_user_attr('model', model)
+    
     return rmsle
     # mape = mean_absolute_percentage_error(y_test, y_pred)
     # return mape
@@ -75,12 +80,13 @@ def xgb_objective(trial, X_train, y_train, x_test, y_test):
     """
 
     params = {
-       # 'objective': 'reg:squarederror',
-        'n_estimators': trial.suggest_int('n_estimators', 200, 2e3),
-        'max_depth': trial.suggest_int('max_depth', 3, 15),
+        #'objective': 'reg:pseudohubererror',
+        'n_estimators': trial.suggest_int('n_estimators', 200, 2000),
+        'max_depth': trial.suggest_int('max_depth', 3, 8),
         'learning_rate': trial.suggest_float('learning_rate', 1e-3, 0.1, log=True),
         'subsample': trial.suggest_float('subsample', 0.5, 1.0),
         'colsample_bytree': trial.suggest_float("colsample_bytree", 0.5, 1.0),
+        #"huber_slope": trial.suggest_float("huber_slope", 0.5, 2.0),
         'random_state': RANDOM_STATE
     }
     model = XGBRegressor(**params, verbosity=0)
@@ -88,6 +94,9 @@ def xgb_objective(trial, X_train, y_train, x_test, y_test):
     y_pred_log = model.predict(x_test)
 
     rmsle = np.sqrt(np.mean((y_test - y_pred_log) ** 2))
+
+    trial.set_user_attr('model', model)
+
     return rmsle
     # mape = mean_absolute_percentage_error(y_test, y_pred)
     # return mape
@@ -115,8 +124,8 @@ def rf_objective(trial, X_train, y_train, x_test, y_test):
     """
     params = {
         'n_estimators': trial.suggest_int('n_estimators', 200, 2000),
-        'max_depth': trial.suggest_int('max_depth', 3, 15),
-        'min_samples_leaf': trial.suggest_int('min_samples_leaf', 1, 20),
+        'max_depth': trial.suggest_int('max_depth', 3, 10),
+        'min_samples_leaf': trial.suggest_int('min_samples_leaf', 5, 30),
         'max_features': trial.suggest_float('max_features', 0.3, 1.0),
         'random_state': RANDOM_STATE
     }
@@ -125,6 +134,9 @@ def rf_objective(trial, X_train, y_train, x_test, y_test):
     y_pred_log = model.predict(x_test)
 
     rmsle = np.sqrt(np.mean((y_test - y_pred_log) ** 2))
+
+    trial.set_user_attr('model', model)
+
     return rmsle
     # mape = mean_absolute_percentage_error(y_test, y_pred)
     # return mape
@@ -135,7 +147,7 @@ class OptunaHPO:
         self.y_train = y_train
         self.x_test = x_test
         self.y_test = y_test
-
+       
     def _create_study(self, model_name):
         """
         This function is used to create a study for the model.
@@ -170,14 +182,14 @@ class OptunaHPO:
         model_name : str
             The name of the model
         """
-        os.makedirs(f'data/models/hpo', exist_ok=True)
-        with open(f'data/models/hpo/{model_name}_{datetime.now().strftime("%Y%m%d_%H%M")}_study.json', 'w') as f:
-            json.dump({
-                'model_name': model_name,
-                'model_params': study.best_trial.params,
-                'rmsle': study.best_value,
-                'n_trials': len(study.trials)
-            }, f, indent=4)
+        os.makedirs(f'data/models/hpo', exist_ok=True)      
+        joblib.dump({
+            'model_name': model_name,
+            'model_params':  study.best_trial.params,
+            'rmsle': study.best_value,
+            'n_trials': len(study.trials),
+            'model': study.best_trial.user_attrs['model']
+            }, f'data/models/hpo/{model_name}_{datetime.now().strftime("%Y%m%d_%H%M")}.pkl')
 
 
     def lgbm_optimize(self, n_trials: int):

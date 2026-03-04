@@ -120,7 +120,7 @@ class BikeSharingDemandFlow(FlowSpec):
     @step
     def evaluate_models(self):
         eval_results = EvalResults(
-            hpo_results_folder=f'data/models/hpo/', # run_id is a unique identifier for each run of the flow, provided by Metaflow
+            hpo_results_folder='data/models/hpo/',
             baseline_results_path='data/models/'
         )
         best_model = eval_results.evaluate_models()

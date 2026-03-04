@@ -1,9 +1,12 @@
+import joblib
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_absolute_percentage_error
+#from sklearn.metrics import mean_absolute_percentage_error
 from datetime import datetime
 import json
 import os
 import numpy as np
+
+from processing import rmsle
 
 def train_rf_model(X, y):
     """
@@ -59,10 +62,10 @@ def save_baseline_model_info(model_name, model, rmsle):
         The mean absolute percentage error of the model
     """
     os.makedirs('data/models', exist_ok=True)
-    with open(f'data/models/{model_name}_{datetime.now().strftime("%Y%m%d_%H%M")}.json', 'w') as f:
-        json.dump({
-            'model_name': model_name,
-            'model_type': model.__class__.__name__,
-            'model_params': model.get_params(),
-            'rmsle': rmsle
-        }, f, indent=4)
+    joblib.dump({
+        'model_name': model_name,
+        'model_type': model.__class__.__name__,
+        'model_params': model.get_params(),
+        'rmsle': rmsle,
+        'model': model
+    }, f'data/models/{model_name}_{datetime.now().strftime("%Y%m%d_%H%M")}.pkl')

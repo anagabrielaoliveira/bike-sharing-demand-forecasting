@@ -13,3 +13,19 @@ __pycache__/
 .metaflow/
 
 *.pyc
+
+test_1.py
+.data/models/
+.data/models/hpo/
+.metaflow-tutorials/
+
+__pycache__/
+*.pyc
+.metaflow/
+data/models/
+data/best_model.pkl
+data/models/hpo/*.pkl
+.ipynb_checkpoints/
+.venv/
+
+
