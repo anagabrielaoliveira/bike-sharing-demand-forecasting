@@ -1,0 +1,52 @@
+[MFLOG|0|2026-01-24T20:02:27.950011Z|runtime|3d4089bd-c6a2-4406-99bf-54c9e5e164c2]<flow BikeSharingDemandFlow step outlier_removal> failed:
+[MFLOG|0|2026-01-24T20:02:27.958659Z|runtime|d8869788-8035-4841-9882-32b7c4a558bc]    Internal error
+[MFLOG|0|2026-01-24T20:02:27.959658Z|runtime|2f48974c-3949-4af1-9b02-48b63feff72d]Traceback (most recent call last):
+[MFLOG|0|2026-01-24T20:02:27.959744Z|runtime|d43736ef-173e-425e-841c-b5deda5d5261]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli.py", line 727, in main
+[MFLOG|0|2026-01-24T20:02:27.959785Z|runtime|dcbc4802-d423-4d21-b61a-1c6d67f6071c]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2026-01-24T20:02:27.959812Z|runtime|16f08ec3-c4f0-4b6c-bb4b-ac732f7ed7fc]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2026-01-24T20:02:27.959839Z|runtime|2f7a821f-1a9c-4ef1-b970-9261eece77be]    return self.main(args, kwargs)
+[MFLOG|0|2026-01-24T20:02:27.959868Z|runtime|f789b118-43fe-4ac8-b213-59e0909307fc]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T20:02:27.959892Z|runtime|6fd1628a-d900-4e25-8015-3bd1e492adee]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2026-01-24T20:02:27.959918Z|runtime|2133e23f-7491-4b08-aa2b-e5df49a70c59]    rv = self.invoke(ctx)
+[MFLOG|0|2026-01-24T20:02:27.959941Z|runtime|a9e9ebd3-b45f-4c59-a51e-452005f532db]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T20:02:27.959965Z|runtime|6e6a6796-7137-4013-8427-ba540fb0950e]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli_components/utils.py", line 69, in invoke
+[MFLOG|0|2026-01-24T20:02:27.959984Z|runtime|51371347-7087-4ffc-b421-ab29dc06d61e]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2026-01-24T20:02:27.960003Z|runtime|774878b6-77a4-47cc-9b91-7d1ff8041439]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T20:02:27.960023Z|runtime|7de1b537-32c7-47e3-90d9-301f8d95c3ad]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2026-01-24T20:02:27.960048Z|runtime|35641e8c-db67-4b32-bca0-2f6fac3df437]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2026-01-24T20:02:28.034777Z|runtime|9ccc280b-515c-494a-8e84-55e8790274d5]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T20:02:28.034891Z|runtime|f3198d8b-88f4-4ef3-b340-6ff443f1e7bf]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2026-01-24T20:02:28.034922Z|runtime|b0b6816d-b3a9-47ca-89c9-b3151e2b6f39]    return callback(args, kwargs)
+[MFLOG|0|2026-01-24T20:02:28.034944Z|runtime|0a66e35a-5dcd-41e3-bf90-3c2c9b2b5941]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T20:02:28.034964Z|runtime|c06974ff-54bb-4743-96bc-2a621eb25220]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/tracing/__init__.py", line 27, in wrapper_func
+[MFLOG|0|2026-01-24T20:02:28.034986Z|runtime|078034aa-22ae-45a8-9f1c-51d391a894bf]    return func(args, kwargs)
+[MFLOG|0|2026-01-24T20:02:28.035005Z|runtime|fc6539f7-547f-45f1-a99b-8a9ac5424bbb]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T20:02:28.035024Z|runtime|f9d4f529-6c46-427b-b074-1ea16688aa09]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2026-01-24T20:02:28.035044Z|runtime|f7715387-602c-44c3-985f-f08d1c677e51]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2026-01-24T20:02:28.035061Z|runtime|8db04b35-3be5-43e8-b818-fa63a895d770]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T20:02:28.035080Z|runtime|9408e547-2e11-4a66-b2f2-ae2fddab7af9]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli_components/step_cmd.py", line 171, in step
+[MFLOG|0|2026-01-24T20:02:28.035098Z|runtime|70f8404c-b9f0-46ea-8b63-fb3fba6d14b9]    task.run_step(
+[MFLOG|0|2026-01-24T20:02:28.035115Z|runtime|43f59e45-5ce6-49fd-85b5-832ad0d26671]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 899, in run_step
+[MFLOG|0|2026-01-24T20:02:28.035130Z|runtime|0e834172-d4aa-4dca-85cc-65eacd42931e]    self._exec_step_function(step_func, orig_step_func)
+[MFLOG|0|2026-01-24T20:02:28.035148Z|runtime|984fa230-fdfe-4853-8eaf-13f6704037e0]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 147, in _exec_step_function
+[MFLOG|0|2026-01-24T20:02:28.035168Z|runtime|67bbd4c5-8e3c-4bcd-b541-a5d9f86440db]    raise raised_exception
+[MFLOG|0|2026-01-24T20:02:28.035189Z|runtime|bffe3531-e9ce-45c9-b1bd-66d2cd1b9618]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 113, in _exec_step_function
+[MFLOG|0|2026-01-24T20:02:28.035205Z|runtime|987d7738-d189-41ac-ad3d-2b06887f1a67]    step_function()
+[MFLOG|0|2026-01-24T20:02:28.035222Z|runtime|e704b8d6-61aa-403c-8bc2-667c4f92f568]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/flow.py", line 56, in outlier_removal
+[MFLOG|0|2026-01-24T20:02:28.035242Z|runtime|d2f6574c-b37f-4811-b77c-c0934ea1734f]    .temp_and_atemp_outlier_removal(
+[MFLOG|0|2026-01-24T20:02:28.035259Z|runtime|fd4e9b3e-31e5-4085-850f-28d6712b830e]     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T20:02:28.035273Z|runtime|d9726859-99ee-408c-9d2d-3e65a2146dd6]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/preprocess/outlier_removal.py", line 20, in temp_and_atemp_outlier_removal
+[MFLOG|0|2026-01-24T20:02:28.035286Z|runtime|73ac0e2c-c571-42b6-ab26-09f77587c3ff]    self.df = self.df[~mask]
+[MFLOG|0|2026-01-24T20:02:28.035303Z|runtime|0f4601a5-7b77-40f1-84ab-0d5356ee15f4]                      ^^^^^
+[MFLOG|0|2026-01-24T20:02:28.035323Z|runtime|88c3e32f-2f20-46e1-b0b1-a81ecee0f44b]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/pandas/core/generic.py", line 1507, in __invert__
+[MFLOG|0|2026-01-24T20:02:28.035340Z|runtime|2daa02f6-2c61-408f-a517-68f3e5826a28]    new_data = self._mgr.apply(operator.invert)
+[MFLOG|0|2026-01-24T20:02:28.035353Z|runtime|06430f39-48b3-4b8d-8421-8f59b30177ad]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T20:02:28.035366Z|runtime|68201234-c514-46df-a615-65a166c5f776]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/pandas/core/internals/managers.py", line 440, in apply
+[MFLOG|0|2026-01-24T20:02:28.035380Z|runtime|04c05c0b-22ae-4239-b7c7-d35e3a6277e8]    applied = b.apply(f, kwargs)
+[MFLOG|0|2026-01-24T20:02:28.035394Z|runtime|f010b9be-fd49-45fb-804a-150488b1358f]              ^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T20:02:28.035410Z|runtime|15fd26e8-2b11-405c-bd74-3d6558e35e14]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/pandas/core/internals/blocks.py", line 347, in apply
+[MFLOG|0|2026-01-24T20:02:28.035427Z|runtime|e2622683-f69b-44f2-b9d3-762f0c8a55b1]    result = func(self.values, kwargs)
+[MFLOG|0|2026-01-24T20:02:28.035443Z|runtime|0f2fe54b-94b2-46c8-a951-522911d4e24e]             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-24T20:02:28.035459Z|runtime|928d7786-369a-4445-9bc0-e47ab05cfe1c]TypeError: ufunc 'invert' not supported for the input types, and the inputs could not be safely coerced to any supported types according to the casting rule ''safe''
+[MFLOG|0|2026-01-24T20:02:28.035475Z|runtime|9f0a59e4-903c-4013-a73d-0b0aedb9421c]
+[MFLOG|0|2026-01-24T20:02:28.035786Z|runtime|59e77186-44ee-4ffb-912c-532cd7c2e352]Task failed.

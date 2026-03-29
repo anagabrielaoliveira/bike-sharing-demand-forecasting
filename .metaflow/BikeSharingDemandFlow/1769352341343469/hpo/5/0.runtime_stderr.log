@@ -1,0 +1,40 @@
+[MFLOG|0|2026-01-25T14:45:50.466892Z|runtime|aad410e7-331e-4ba9-8dc9-e97a476d3288]<flow BikeSharingDemandFlow step hpo> failed:
+[MFLOG|0|2026-01-25T14:45:50.469811Z|runtime|bcdc7ab9-6221-40b3-aaab-d2bad38149e1]    Internal error
+[MFLOG|0|2026-01-25T14:45:50.470585Z|runtime|0a598778-84e5-46f2-8591-8fe4b472fe0c]Traceback (most recent call last):
+[MFLOG|0|2026-01-25T14:45:50.470619Z|runtime|da207c10-bb41-4ca8-8e26-700078e6bf6d]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli.py", line 727, in main
+[MFLOG|0|2026-01-25T14:45:50.470648Z|runtime|6a5a0c61-4221-418f-8274-e00b773cb31e]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2026-01-25T14:45:50.470670Z|runtime|c93d37a4-3610-441b-9c26-ebcaadafb5ab]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2026-01-25T14:45:50.470694Z|runtime|73b53099-5320-4e12-93bf-f754df8eadfe]    return self.main(args, kwargs)
+[MFLOG|0|2026-01-25T14:45:50.563732Z|runtime|04360cd2-4eb9-436d-bcd4-4d1abf5ea989]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:45:50.563837Z|runtime|3b4d3c14-646d-4624-8b04-17ba36fefef9]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2026-01-25T14:45:50.563863Z|runtime|d54737bd-e792-4c58-8379-3cde26c05994]    rv = self.invoke(ctx)
+[MFLOG|0|2026-01-25T14:45:50.563887Z|runtime|cb3544a9-868b-43e9-98f8-ef5aa7bd8795]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:45:50.563906Z|runtime|7451d6fd-ae3c-481a-91a6-4be7d257f83a]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli_components/utils.py", line 69, in invoke
+[MFLOG|0|2026-01-25T14:45:50.563922Z|runtime|f653e67d-c212-4c7f-ada3-1da01d438c3c]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2026-01-25T14:45:50.563937Z|runtime|5f1ee5c2-19cc-4e81-b4af-af6506eb0c76]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:45:50.563957Z|runtime|03c75e68-b713-494e-a5be-6e1d4b536901]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2026-01-25T14:45:50.563975Z|runtime|69c9cd30-0f10-401f-952e-93aea4506565]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2026-01-25T14:45:50.563993Z|runtime|c673f14a-6a45-42c8-a2be-f657227dc9ba]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:45:50.564009Z|runtime|6e5f5e91-41bc-4ccc-8c58-b31e924cfde1]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2026-01-25T14:45:50.564027Z|runtime|37fc2268-6a41-4f7d-a00b-ba1c189159bd]    return callback(args, kwargs)
+[MFLOG|0|2026-01-25T14:45:50.564043Z|runtime|ab16e454-ece8-4cbd-9b65-5cd8914704f9]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:45:50.564061Z|runtime|1b291994-e25b-45f8-a0bc-7335e83439f7]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/tracing/__init__.py", line 27, in wrapper_func
+[MFLOG|0|2026-01-25T14:45:50.564075Z|runtime|b617589b-f38a-4c89-8dc1-bfeba2cd2775]    return func(args, kwargs)
+[MFLOG|0|2026-01-25T14:45:50.564089Z|runtime|e3be7117-d8c4-464a-ad9a-3b9aaf10e3f0]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:45:50.564106Z|runtime|2d1d4b8f-5a08-4693-8722-8daadea8f92c]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2026-01-25T14:45:50.564128Z|runtime|21774751-4caa-4460-8e85-98b4b4eebb22]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2026-01-25T14:45:50.564144Z|runtime|6829cfad-b5c6-4d62-b484-562f52819b31]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:45:50.564163Z|runtime|a97814b9-70be-4256-9561-3fe362a1c5bd]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli_components/step_cmd.py", line 171, in step
+[MFLOG|0|2026-01-25T14:45:50.564181Z|runtime|f877feff-af85-457d-b7e7-daa01ec3b62e]    task.run_step(
+[MFLOG|0|2026-01-25T14:45:50.564201Z|runtime|fb97c15e-3e7d-4e0d-b18e-bf4364b9bd2b]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 899, in run_step
+[MFLOG|0|2026-01-25T14:45:50.564219Z|runtime|109a6836-6662-480d-bec0-067473f1c28f]    self._exec_step_function(step_func, orig_step_func)
+[MFLOG|0|2026-01-25T14:45:50.564233Z|runtime|2428d737-0a07-4b73-a1a1-a29122005b25]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 147, in _exec_step_function
+[MFLOG|0|2026-01-25T14:45:50.564251Z|runtime|cbe58e44-701b-460d-87d9-0eeca719fa04]    raise raised_exception
+[MFLOG|0|2026-01-25T14:45:50.564270Z|runtime|151447fd-3645-4602-a4bb-2a1279970a49]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 113, in _exec_step_function
+[MFLOG|0|2026-01-25T14:45:50.564288Z|runtime|dcf03c33-fb13-4cbb-9e1d-1cf784e739ed]    step_function()
+[MFLOG|0|2026-01-25T14:45:50.564305Z|runtime|0d9f8090-73b7-4cb5-9bb6-5ec682a36102]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/flow.py", line 104, in hpo
+[MFLOG|0|2026-01-25T14:45:50.564320Z|runtime|43e9f5d6-9cc5-4529-af30-40e8e4eac1a2]    pruner=HyperbandPruner(n_jobs=4, seed=RANDOM_STATE)
+[MFLOG|0|2026-01-25T14:45:50.564334Z|runtime|42b111e3-07fa-4721-bdc8-67dd4dd6b6fb]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T14:45:50.564347Z|runtime|280fd165-6823-4e30-b7ac-1e1f3865e695]TypeError: HyperbandPruner.__init__() got an unexpected keyword argument 'n_jobs'
+[MFLOG|0|2026-01-25T14:45:50.564365Z|runtime|294df28b-cbd1-4bc6-8b04-46fc5e3bb49b]
+[MFLOG|0|2026-01-25T14:45:50.564714Z|runtime|3147c9bd-e4be-4462-9368-e004f8e55f54]Task failed.

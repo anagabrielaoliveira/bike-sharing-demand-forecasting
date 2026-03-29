@@ -1,0 +1,6 @@
+[MFLOG|0|2026-01-25T16:11:33.426128Z|runtime|98c46723-adb3-4153-950c-9335d8300da3]                 model_name  model_params          mape  n_trials
+[MFLOG|0|2026-01-25T16:11:33.521546Z|runtime|d6dfc9ba-6d4b-4277-a918-e8bd2d4736b9]n_estimators            xgb     65.000000  9.644613e+13        10
+[MFLOG|0|2026-01-25T16:11:33.521640Z|runtime|391abb32-7d7c-43e5-bf55-05d4aaff07fd]max_depth               xgb      5.000000  9.644613e+13        10
+[MFLOG|0|2026-01-25T16:11:33.521668Z|runtime|197aceb7-2ebb-4ea1-8c82-3fb1de55bd8d]learning_rate           xgb      0.001349  9.644613e+13        10
+[MFLOG|0|2026-01-25T16:11:33.521692Z|runtime|6087d167-80b6-4770-bf25-6c199a553df2]subsample               xgb      0.951441  9.644613e+13        10
+[MFLOG|0|2026-01-25T16:11:33.521711Z|runtime|0898134c-241a-4a23-a32d-0f3c94f78958]colsample_bytree        xgb      0.967350  9.644613e+13        10

@@ -1,0 +1,5 @@
+[MFLOG|0|2026-02-24T23:31:42.753691Z|runtime|580619e5-7fc1-4e38-b1e9-5f06fb8c47cb]Traceback (most recent call last):
+[MFLOG|0|2026-02-24T23:31:42.757386Z|runtime|84b8ce64-32d6-4140-976a-fe071691fe62]  File "/mnt/c/Users/olive/python-projects/bike-sharing-demand-forecasting/src/flow.py", line 2, in <module>
+[MFLOG|0|2026-02-24T23:31:42.757626Z|runtime|e0b71a50-05e4-475c-94d0-dee521d5cefd]    from src.preprocess import (
+[MFLOG|0|2026-02-24T23:31:42.811794Z|runtime|6108b267-4895-49e2-9084-ccda3c54eefc]ModuleNotFoundError: No module named 'src'
+[MFLOG|0|2026-02-24T23:31:42.830526Z|runtime|74256417-9aeb-4150-b037-c02bdfaa8d48]Task failed.

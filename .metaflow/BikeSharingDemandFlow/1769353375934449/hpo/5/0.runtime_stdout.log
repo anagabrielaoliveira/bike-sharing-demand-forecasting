@@ -1,0 +1,47 @@
+[MFLOG|0|2026-01-25T15:03:34.621096Z|runtime|5ec28254-6c6f-4f63-ba7e-ef611ec5e4ef][I 2026-01-25 12:03:14,042] Trial 0 finished with value: 1.0776159623038926 and parameters: {'num_leaves': 376, 'max_depth': 15, 'min_data_in_leaf': 74, 'learning_rate': 0.015751320499779727, 'colsample_bytree': 0.1982177084203147, 'n_estimators': 240}. Best is trial 0 with value: 1.0776159623038926.
+[MFLOG|0|2026-01-25T15:03:42.154681Z|runtime|cd5e0c42-8983-42cd-b4a1-18a5819b89b4][I 2026-01-25 12:03:34,622] Trial 1 finished with value: 0.7371358474616554 and parameters: {'num_leaves': 60, 'max_depth': 14, 'min_data_in_leaf': 61, 'learning_rate': 0.02607024758370768, 'colsample_bytree': 0.06955526958101232, 'n_estimators': 973}. Best is trial 1 with value: 0.7371358474616554.
+[MFLOG|0|2026-01-25T15:03:50.600562Z|runtime|d3de49a2-2c3f-4b53-9076-e9f8d5808c75][I 2026-01-25 12:03:42,155] Trial 2 finished with value: 1.342821243082322 and parameters: {'num_leaves': 833, 'max_depth': 5, 'min_data_in_leaf': 19, 'learning_rate': 0.002327067708383781, 'colsample_bytree': 0.3390301308115608, 'n_estimators': 572}. Best is trial 1 with value: 0.7371358474616554.
+[MFLOG|0|2026-01-25T15:04:08.654390Z|runtime|4ed16960-3fcd-42f1-af0c-19f521af2b7f][KILLED BY ORCHESTRATOR]
+[MFLOG|0|2026-01-25T15:04:08.789458Z|runtime|37f5d023-0359-45ce-8a25-c6be44c7ca94][I 2026-01-25 12:03:50,601] Trial 3 finished with value: 1.4263136350631374 and parameters: {'num_leaves': 433, 'max_depth': 6, 'min_data_in_leaf': 62, 'learning_rate': 0.0019010245319870357, 'colsample_bytree': 0.3275374161084572, 'n_estimators': 430}. Best is trial 1 with value: 0.7371358474616554.
+[MFLOG|0|2026-01-25T15:04:08.789478Z|runtime|57ff9a43-9839-4341-be75-0af9729fd681][W 2026-01-25 12:04:08,657] Trial 4 failed with parameters: {'num_leaves': 457, 'max_depth': 13, 'min_data_in_leaf': 20, 'learning_rate': 0.010677482709481349, 'colsample_bytree': 0.6127938404189404, 'n_estimators': 141} because of the following error: KeyboardInterrupt().
+[MFLOG|0|2026-01-25T15:04:08.789494Z|runtime|f9cdecfb-f0f8-4898-b48c-3406c3bfba39]Traceback (most recent call last):
+[MFLOG|0|2026-01-25T15:04:08.789542Z|runtime|d360eb8e-8054-4782-b9d2-811a7f215958]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/optuna/study/_optimize.py", line 206, in _run_trial
+[MFLOG|0|2026-01-25T15:04:08.789611Z|runtime|f67d8ee7-5a49-4fb3-9317-025cc7e8e504]    value_or_values = func(trial)
+[MFLOG|0|2026-01-25T15:04:08.789645Z|runtime|f9840cd7-4f55-4253-9bc1-2e97205a778f]                      ^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:04:08.789663Z|runtime|822abe74-7a3d-4fac-868c-a5040bccd5aa]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/flow.py", line 115, in <lambda>
+[MFLOG|0|2026-01-25T15:04:08.789679Z|runtime|f29532c4-5c5e-4af1-a2da-0a8adb5f1631]    lambda trial: lgbm_objective(
+[MFLOG|0|2026-01-25T15:04:08.789695Z|runtime|06d38671-4bd6-4f51-b363-3f8e2ee3b82b]                  ^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:04:08.789710Z|runtime|99ec2651-e1c1-434f-898b-ba88e7959cbb]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/hpo/optuna_hpo.py", line 25, in lgbm_objective
+[MFLOG|0|2026-01-25T15:04:08.789727Z|runtime|458799b9-9340-4c37-afea-170d43662b04]    y_pred = model.predict(x_test)
+[MFLOG|0|2026-01-25T15:04:08.789744Z|runtime|7b954155-8a3d-4c7d-9c51-a029a5951e8c]    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:04:08.789762Z|runtime|aa3a2b9e-bed8-4657-afed-0b9abdc4f690]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1336, in wrapper
+[MFLOG|0|2026-01-25T15:04:08.789776Z|runtime|0a94d885-57be-4f5c-b0d1-2de6d0844ab9]    return fit_method(estimator, *args, **kwargs)
+[MFLOG|0|2026-01-25T15:04:08.789791Z|runtime|f2817a9f-caa2-4b05-ac33-157482f003aa]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:04:08.789806Z|runtime|0697bc6c-0273-4d28-9b99-aaad3124c200]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/sklearn/multioutput.py", line 274, in fit
+[MFLOG|0|2026-01-25T15:04:08.789820Z|runtime|0e96ed3d-ea37-46a1-a5b4-018c382e032b]    self.estimators_ = Parallel(n_jobs=self.n_jobs)(
+[MFLOG|0|2026-01-25T15:04:08.789836Z|runtime|088baf83-b0d1-45d0-b94d-f46da2f2e9ee]                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:04:08.789850Z|runtime|eb9ca9c7-f3a5-4c75-a45a-9cbd6cb8183e]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 91, in __call__
+[MFLOG|0|2026-01-25T15:04:08.789864Z|runtime|fbf7318c-f270-4080-a793-00cbdcc1a5e9]    return super().__call__(iterable_with_config_and_warning_filters)
+[MFLOG|0|2026-01-25T15:04:08.789878Z|runtime|da1fbc3a-fdb9-4d53-9281-2b0be7db49e6]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:04:08.789894Z|runtime|963d1303-97af-446d-a129-b5804ea8f00e]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1986, in __call__
+[MFLOG|0|2026-01-25T15:04:08.789908Z|runtime|6a31cb57-7077-4a31-a5ea-b5924e31f574]    return output if self.return_generator else list(output)
+[MFLOG|0|2026-01-25T15:04:08.789922Z|runtime|629c29ed-b0c7-4bb5-9331-27fbef6cda8d]                                                ^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:04:08.789935Z|runtime|c5561639-47f9-4b65-8da8-583e2fb56fc0]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1914, in _get_sequential_output
+[MFLOG|0|2026-01-25T15:04:08.789951Z|runtime|8afc70bc-72dd-4654-83fe-fce99e09c297]    res = func(*args, **kwargs)
+[MFLOG|0|2026-01-25T15:04:08.789965Z|runtime|4e9e693f-781a-4753-8720-7678be735257]          ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:04:08.789979Z|runtime|d0df7ab3-c219-4552-8513-0940a2154a5e]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 184, in __call__
+[MFLOG|0|2026-01-25T15:04:08.789992Z|runtime|bb99f952-50d5-4655-9f3c-bf0a2e394226]    return self.function(*args, **kwargs)
+[MFLOG|0|2026-01-25T15:04:08.790006Z|runtime|12e1c6b2-dbc5-4b57-973d-626d99ec57fd]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:04:08.790019Z|runtime|d63b02e8-1bbe-4e67-bad7-7d607a34d822]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/sklearn/multioutput.py", line 63, in _fit_estimator
+[MFLOG|0|2026-01-25T15:04:08.790034Z|runtime|8b637b87-f499-459c-99f1-a01ed7582000]    estimator.fit(X, y, **fit_params)
+[MFLOG|0|2026-01-25T15:04:08.790048Z|runtime|48fb299a-d5bc-4f76-96be-6941c32a6f0a]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py", line 1398, in fit
+[MFLOG|0|2026-01-25T15:04:08.790062Z|runtime|1baa80b2-5e98-4779-8705-14f52543a7e7]    super().fit(
+[MFLOG|0|2026-01-25T15:04:08.790077Z|runtime|fa24e358-3de0-4dd6-a9ca-a197ece8be36]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/lightgbm/sklearn.py", line 1049, in fit
+[MFLOG|0|2026-01-25T15:04:08.790090Z|runtime|a3c2e83e-5101-40dd-a8bb-b9f78b494344]    self._Booster = train(
+[MFLOG|0|2026-01-25T15:04:08.790103Z|runtime|f2c5b53c-cd02-4a65-b553-dcf73df68d0f]                    ^^^^^^
+[MFLOG|0|2026-01-25T15:04:08.790118Z|runtime|21366044-91d4-40be-ab01-7d34626cfc36]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/lightgbm/engine.py", line 322, in train
+[MFLOG|0|2026-01-25T15:04:08.790132Z|runtime|90a7484c-a1d5-4125-8d1e-e5a930b833a2]    booster.update(fobj=fobj)
+[MFLOG|0|2026-01-25T15:04:08.790145Z|runtime|a217097e-c4b5-4d48-88cc-c487b5980d8f]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/lightgbm/basic.py", line 4155, in update
+[MFLOG|0|2026-01-25T15:04:08.790159Z|runtime|8906c020-4b1f-4fc8-8652-2190c12e97ac]    _LIB.LGBM_BoosterUpdateOneIter(
+[MFLOG|0|2026-01-25T15:04:08.790173Z|runtime|26a3d15b-18f3-4081-b6d2-6626cfcbef83]KeyboardInterrupt
+[MFLOG|0|2026-01-25T15:04:08.790186Z|runtime|3de01f03-9bc8-4b4f-b07e-fa8cb1cf73b0][W 2026-01-25 12:04:08,662] Trial 4 failed with value None.

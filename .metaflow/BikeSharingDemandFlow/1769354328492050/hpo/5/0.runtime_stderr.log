@@ -1,0 +1,101 @@
+[MFLOG|0|2026-01-25T15:18:58.050469Z|runtime|72c36aff-ca96-4d05-b348-bfb4f16dc033][I 2026-01-25 12:18:58,050] A new study created in memory with name: lgbm
+[MFLOG|0|2026-01-25T15:19:05.109211Z|runtime|47c8eb6d-f548-4a34-a781-302c4f7993b7]  0%|          | 0/5 [00:00<?, ?it/s]                                       0%|          | 0/5 [00:00<?, ?it/s]Best trial: 0. Best value: 1.52896:   0%|          | 0/5 [00:00<?, ?it/s]Best trial: 0. Best value: 1.52896:  20%|██        | 1/5 [00:00<00:03,  1.08it/s]                                                                                 Best trial: 0. Best value: 1.52896:  20%|██        | 1/5 [00:03<00:03,  1.08it/s]Best trial: 1. Best value: 1.41774:  20%|██        | 1/5 [00:03<00:03,  1.08it/s]Best trial: 1. Best value: 1.41774:  40%|████      | 2/5 [00:03<00:05,  1.80s/it]                                                                                 Best trial: 1. Best value: 1.41774:  40%|████      | 2/5 [00:04<00:05,  1.80s/it]Best trial: 1. Best value: 1.41774:  40%|████      | 2/5 [00:04<00:05,  1.80s/it]Best trial: 1. Best value: 1.41774:  60%|██████    | 3/5 [00:04<00:02,  1.33s/it]                                                                                 Best trial: 1. Best value: 1.41774:  60%|██████    | 3/5 [00:05<00:02,  1.33s/it]Best trial: 1. Best value: 1.41774:  60%|██████    | 3/5 [00:05<00:02,  1.33s/it]Best trial: 1. Best value: 1.41774:  80%|████████  | 4/5 [00:05<00:01,  1.17s/it]                                                                                 Best trial: 1. Best value: 1.41774:  80%|████████  | 4/5 [00:07<00:01,  1.17s/it]Best trial: 1. Best value: 1.41774:  80%|████████  | 4/5 [00:07<00:01,  1.17s/it]Best trial: 1. Best value: 1.41774: 100%|██████████| 5/5 [00:07<00:00,  1.48s/it]Best trial: 1. Best value: 1.41774: 100%|██████████| 5/5 [00:07<00:00,  1.41s/it]
+[MFLOG|0|2026-01-25T15:19:05.109811Z|runtime|7d9d8f01-1a87-4af5-9be3-2129c67017c8][I 2026-01-25 12:19:05,109] A new study created in memory with name: xgb
+[MFLOG|0|2026-01-25T15:19:05.116000Z|runtime|bf68de0b-a989-4b57-9c3f-4b1ad609a0bb]  0%|          | 0/5 [00:00<?, ?it/s]                                       0%|          | 0/5 [00:00<?, ?it/s]                                       0%|          | 0/5 [00:00<?, ?it/s]  0%|          | 0/5 [00:00<?, ?it/s]
+[MFLOG|0|2026-01-25T15:19:05.118161Z|runtime|1d39f201-c4ce-44b7-a402-9f6d4a5cb1e2]<flow BikeSharingDemandFlow step hpo> failed:
+[MFLOG|0|2026-01-25T15:19:05.124116Z|runtime|c00fa407-c19a-47aa-8ff4-56cfdf817e1e]    Internal error
+[MFLOG|0|2026-01-25T15:19:05.126205Z|runtime|3094f0c9-5a2f-4f7c-8edd-f1674fc12ea6]Traceback (most recent call last):
+[MFLOG|0|2026-01-25T15:19:05.126231Z|runtime|008ac8ff-e96a-4151-a8ab-69320ddcc4a4]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli.py", line 727, in main
+[MFLOG|0|2026-01-25T15:19:05.126254Z|runtime|197cd99f-653d-4d7a-b0a5-9992cd5526bf]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2026-01-25T15:19:05.126272Z|runtime|0682a0ab-d6c5-410d-b17b-031b03431407]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2026-01-25T15:19:05.126292Z|runtime|d75f9ca9-5789-4f96-901b-5f5e8ccb1417]    return self.main(args, kwargs)
+[MFLOG|0|2026-01-25T15:19:05.280933Z|runtime|fc3ea113-6307-4ccb-91bf-395317cf7e13]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.281064Z|runtime|c2e8ee07-bffc-4d21-bd5e-292681c4b8e1]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2026-01-25T15:19:05.281097Z|runtime|d8e782a4-2e90-4c21-9c8c-c2595ea15bb2]    rv = self.invoke(ctx)
+[MFLOG|0|2026-01-25T15:19:05.281117Z|runtime|5dc81030-eb25-4abc-97e2-c019838874d8]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.281137Z|runtime|5c270d64-144a-47b4-9c46-6bd09c6fb0a1]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli_components/utils.py", line 69, in invoke
+[MFLOG|0|2026-01-25T15:19:05.281154Z|runtime|31aed8ca-bd3a-43c8-a51f-343c3c6e9e18]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2026-01-25T15:19:05.281174Z|runtime|23c94b5e-ccae-4296-a77d-13a51d8dc3a5]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.281211Z|runtime|a24c4d3b-6510-4fce-a71c-e417d7aeaa07]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2026-01-25T15:19:05.281231Z|runtime|394554c7-9e5f-4884-866d-2c59ee6ce578]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2026-01-25T15:19:05.281247Z|runtime|8e2c4b71-5115-4768-ac3c-eeee5e632488]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.281266Z|runtime|3581328a-1ed9-47fc-8666-afd3d8b73160]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2026-01-25T15:19:05.281281Z|runtime|45c56c57-43c0-4929-8ea4-aec1fe858037]    return callback(args, kwargs)
+[MFLOG|0|2026-01-25T15:19:05.281296Z|runtime|354f17e6-3c72-4c97-98ee-0673cd2dcd07]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.281460Z|runtime|199ecfd3-7ce1-4dfc-819a-183803ac4bf4]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/tracing/__init__.py", line 27, in wrapper_func
+[MFLOG|0|2026-01-25T15:19:05.281478Z|runtime|28cf038e-8e70-4763-a263-d72e1893021d]    return func(args, kwargs)
+[MFLOG|0|2026-01-25T15:19:05.281497Z|runtime|33ae66cb-5e64-4c2f-a1a2-153aca35c017]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.281513Z|runtime|19d9185e-b32f-4d85-9ee5-4f71cf58b21d]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2026-01-25T15:19:05.281530Z|runtime|9daa3a0a-5249-44e5-a4bc-1b9b0028966d]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2026-01-25T15:19:05.281545Z|runtime|352b35a3-df5d-4800-b092-96a607414a82]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.281563Z|runtime|ccaf4884-747f-4679-a8c7-80ebae034cb0]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli_components/step_cmd.py", line 171, in step
+[MFLOG|0|2026-01-25T15:19:05.281659Z|runtime|c5496c27-d7fe-421a-b0bf-c8269ccc31aa]    task.run_step(
+[MFLOG|0|2026-01-25T15:19:05.281675Z|runtime|33b1fa32-52ac-4022-b7d1-1f8754f050fb]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 899, in run_step
+[MFLOG|0|2026-01-25T15:19:05.281690Z|runtime|525a6878-846c-4535-95f5-427c429c55f7]    self._exec_step_function(step_func, orig_step_func)
+[MFLOG|0|2026-01-25T15:19:05.281704Z|runtime|f26439bc-849a-4d3e-a1da-3edd35a05969]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 147, in _exec_step_function
+[MFLOG|0|2026-01-25T15:19:05.281719Z|runtime|4f69defb-8cc8-49ed-8ae3-cbb2f4a1eeb6]    raise raised_exception
+[MFLOG|0|2026-01-25T15:19:05.281828Z|runtime|21d301d8-74e1-4c0e-9435-75b038d04074]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 113, in _exec_step_function
+[MFLOG|0|2026-01-25T15:19:05.281844Z|runtime|aaeb3ccb-2393-4564-be2c-10cb14692d06]    step_function()
+[MFLOG|0|2026-01-25T15:19:05.281859Z|runtime|b710ec4a-6890-48e8-ba28-f2f1b3d900e8]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/flow.py", line 104, in hpo
+[MFLOG|0|2026-01-25T15:19:05.281875Z|runtime|f6f39a23-a30b-457e-9ee5-908e9e8929ca]    hpo.xgb_optimize(n_trials=self.n_trials)
+[MFLOG|0|2026-01-25T15:19:05.281889Z|runtime|8d6bfae1-2ae7-47a7-95dd-2698681067af]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/hpo/optuna_hpo.py", line 193, in xgb_optimize
+[MFLOG|0|2026-01-25T15:19:05.281904Z|runtime|d0866dcd-a070-4282-ae80-e3dd6db3e809]    study.optimize(
+[MFLOG|0|2026-01-25T15:19:05.281921Z|runtime|575dbf7e-a091-497b-9e8e-98b7f6e945c8]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/optuna/study/study.py", line 490, in optimize
+[MFLOG|0|2026-01-25T15:19:05.282032Z|runtime|4a9fe56c-7e95-4181-86a6-b9ea4255acb9]    _optimize(
+[MFLOG|0|2026-01-25T15:19:05.282048Z|runtime|17f22156-7485-4fa1-b914-ea0b88700afa]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/optuna/study/_optimize.py", line 68, in _optimize
+[MFLOG|0|2026-01-25T15:19:05.282064Z|runtime|4e54a7a2-8aba-43f6-bc73-ed898d8d7e73]    _optimize_sequential(
+[MFLOG|0|2026-01-25T15:19:05.282083Z|runtime|de49ce0d-f846-48fc-87dd-99a42c5a4cde]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/optuna/study/_optimize.py", line 165, in _optimize_sequential
+[MFLOG|0|2026-01-25T15:19:05.282098Z|runtime|dba80000-4faf-4175-ac82-71a30bf2dbd1]    frozen_trial_id = _run_trial(study, func, catch)
+[MFLOG|0|2026-01-25T15:19:05.282113Z|runtime|9f6d6599-14fd-4409-9c4b-9a54c4e47239]                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.282208Z|runtime|b5734533-4bd3-4321-a764-7c031a967e3f]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/optuna/study/_optimize.py", line 263, in _run_trial
+[MFLOG|0|2026-01-25T15:19:05.282223Z|runtime|bc833ae6-4f3b-4811-99c7-e2e6735eeccd]    raise func_err
+[MFLOG|0|2026-01-25T15:19:05.282241Z|runtime|ab369d06-8171-4914-8d29-26b1ba65238b]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/optuna/study/_optimize.py", line 206, in _run_trial
+[MFLOG|0|2026-01-25T15:19:05.282255Z|runtime|aa139cac-2f57-4057-a97a-aa224a207a54]    value_or_values = func(trial)
+[MFLOG|0|2026-01-25T15:19:05.282269Z|runtime|5d1dc57e-5aee-4722-925d-d17af0d1c427]                      ^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.282283Z|runtime|544ad597-4439-41eb-9ff1-596ecb61486e]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/hpo/optuna_hpo.py", line 194, in <lambda>
+[MFLOG|0|2026-01-25T15:19:05.282372Z|runtime|0c76fb53-f06a-4dce-8543-641a0ea81282]    lambda trial: xgb_objective(
+[MFLOG|0|2026-01-25T15:19:05.282387Z|runtime|4de69b0c-4fe0-4f99-801e-4ba8375a3edf]                  ^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.282401Z|runtime|85ccfec2-c5d7-424c-8d37-9b273d007c2f]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/hpo/optuna_hpo.py", line 77, in xgb_objective
+[MFLOG|0|2026-01-25T15:19:05.282415Z|runtime|d762879f-8620-41be-8cbd-e22d2878d000]    model.fit(X_train, y_train)
+[MFLOG|0|2026-01-25T15:19:05.282428Z|runtime|63192fb9-8f69-42c2-89c7-463ea9045a41]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1336, in wrapper
+[MFLOG|0|2026-01-25T15:19:05.282446Z|runtime|9bae2d58-c13e-4784-9086-293901be8558]    return fit_method(estimator, args, kwargs)
+[MFLOG|0|2026-01-25T15:19:05.282459Z|runtime|c0f5490c-64f3-4bf4-8b12-8478aed65b2e]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.282580Z|runtime|313f562e-29ba-4abe-b90a-0595d7d683d6]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/sklearn/multioutput.py", line 274, in fit
+[MFLOG|0|2026-01-25T15:19:05.282628Z|runtime|32985c3b-ae56-4b12-8cca-41d9cebd2a4b]    self.estimators_ = Parallel(n_jobs=self.n_jobs)(
+[MFLOG|0|2026-01-25T15:19:05.282652Z|runtime|2501b40b-994f-4a40-a8b7-b507a77e3945]                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.282670Z|runtime|bd4c37c7-823d-4a5e-be9e-637a0540b3fc]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 91, in __call__
+[MFLOG|0|2026-01-25T15:19:05.282686Z|runtime|34ef49ab-bead-4ccc-9a2a-6953c12ffb5f]    return super().__call__(iterable_with_config_and_warning_filters)
+[MFLOG|0|2026-01-25T15:19:05.282701Z|runtime|e66ab22f-d7a5-48ce-a1a3-f8ffa2da4a63]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.282803Z|runtime|84f2d87b-1d84-486f-8818-79dc1123a5ff]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1986, in __call__
+[MFLOG|0|2026-01-25T15:19:05.282820Z|runtime|80ad7db3-2cc6-45ac-8a31-f99ba2c38b66]    return output if self.return_generator else list(output)
+[MFLOG|0|2026-01-25T15:19:05.282835Z|runtime|02c3a5c7-9dbc-4d61-a04e-98fe0dcf2c17]                                                ^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.282850Z|runtime|6513c8d9-d106-491e-b146-71e9b1ac094f]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1914, in _get_sequential_output
+[MFLOG|0|2026-01-25T15:19:05.282865Z|runtime|f93b05e2-cae9-4918-96cd-8418340cac38]    res = func(args, kwargs)
+[MFLOG|0|2026-01-25T15:19:05.282880Z|runtime|57127baf-9fa3-4f7e-934c-bb9436e76507]          ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.283171Z|runtime|fb59fa1f-e766-4c89-a84a-eae446888c0a]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 184, in __call__
+[MFLOG|0|2026-01-25T15:19:05.283237Z|runtime|3d161d14-4c34-4a27-bd46-36232512a2dd]    return self.function(args, kwargs)
+[MFLOG|0|2026-01-25T15:19:05.283261Z|runtime|eca6df96-80cf-4522-bfdb-813524ef2e57]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.283279Z|runtime|ab74cb15-9e68-409b-9773-f0e4176a705d]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/sklearn/multioutput.py", line 63, in _fit_estimator
+[MFLOG|0|2026-01-25T15:19:05.283295Z|runtime|61618b69-cdc8-4672-8654-34307f881038]    estimator.fit(X, y, fit_params)
+[MFLOG|0|2026-01-25T15:19:05.283311Z|runtime|99ea32cd-444d-4b33-875f-9ec86b92d8cb]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/xgboost/core.py", line 774, in inner_f
+[MFLOG|0|2026-01-25T15:19:05.283409Z|runtime|246d6925-2eac-46cb-b9ac-69f2617e5e43]    return func(kwargs)
+[MFLOG|0|2026-01-25T15:19:05.283427Z|runtime|f9570810-22d0-4144-858f-977361fd3ea0]           ^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.283442Z|runtime|f6f23b0b-a3e7-4d11-9a71-d53495a46583]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/xgboost/sklearn.py", line 1337, in fit
+[MFLOG|0|2026-01-25T15:19:05.283456Z|runtime|377bf4d9-690f-4251-b128-4d32e51bc0ec]    with config_context(verbosity=self.verbosity):
+[MFLOG|0|2026-01-25T15:19:05.283470Z|runtime|d38f636d-92a4-4524-946e-2380bd79dd2e]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.283484Z|runtime|3ea8c04f-cd1d-49ed-8c20-df29fb4fa23a]  File "/Users/nasserboan/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/contextlib.py", line 137, in __enter__
+[MFLOG|0|2026-01-25T15:19:05.283498Z|runtime|e5b95d43-08e5-4fa9-98d1-8b386d8b74e8]    return next(self.gen)
+[MFLOG|0|2026-01-25T15:19:05.283578Z|runtime|45d3edf0-b6dc-4897-9953-63f447ab50db]           ^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.283594Z|runtime|9f23cf75-24d4-482a-a0f8-b2b896712ca1]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/xgboost/config.py", line 181, in config_context
+[MFLOG|0|2026-01-25T15:19:05.283608Z|runtime|8a8a00e3-b2a4-4510-a71a-47b6b5f518a5]    set_config(new_config)
+[MFLOG|0|2026-01-25T15:19:05.283621Z|runtime|57a5051a-6b32-468d-9978-1d86497030f1]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/xgboost/config.py", line 108, in wrap
+[MFLOG|0|2026-01-25T15:19:05.283634Z|runtime|30219307-7ba1-4ecb-a637-701c03c43413]    return func(args, kwargs)
+[MFLOG|0|2026-01-25T15:19:05.283648Z|runtime|6821e999-4077-42cf-a132-de8c8f5eb7ef]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.283662Z|runtime|681f8afb-02de-437a-962f-ad908277a877]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/xgboost/config.py", line 132, in set_config
+[MFLOG|0|2026-01-25T15:19:05.283737Z|runtime|fa0b5225-2535-44a4-a862-69572e586ed0]    _check_call(_LIB.XGBSetGlobalConfig(c_str(config)))
+[MFLOG|0|2026-01-25T15:19:05.283752Z|runtime|d43889f5-d1ba-4142-97ee-929884e9c2df]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/xgboost/core.py", line 323, in _check_call
+[MFLOG|0|2026-01-25T15:19:05.283766Z|runtime|8d83b581-d639-4e60-b6fb-81a3e058b5e9]    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+[MFLOG|0|2026-01-25T15:19:05.283779Z|runtime|53efc202-da7e-4a93-a26a-058b1237717a]xgboost.core.XGBoostError: value -1 for Parameter verbosity exceed bound [0,3]
+[MFLOG|0|2026-01-25T15:19:05.283792Z|runtime|af00bac6-7e03-4dc1-bf70-f2d7be91300c]verbosity: Flag to print out detailed breakdown of runtime.
+[MFLOG|0|2026-01-25T15:19:05.283806Z|runtime|5181eb92-717a-4f90-802b-5f48b74e5868]
+[MFLOG|0|2026-01-25T15:19:05.285979Z|runtime|bd5101b8-eef1-4500-90fc-53f895ece571]Task failed.

@@ -1,0 +1,5 @@
+[MFLOG|0|2026-01-24T19:50:24.752640Z|runtime|07dddadc-b954-40ba-99f2-e09dadbfdd17]Traceback (most recent call last):
+[MFLOG|0|2026-01-24T19:50:24.752738Z|runtime|88b533c5-de70-473e-88d1-8ce6622e2d4f]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/flow.py", line 2, in <module>
+[MFLOG|0|2026-01-24T19:50:24.752773Z|runtime|15656dfb-eac4-4e47-84d3-48f8852ce393]    from src.preprocess import (
+[MFLOG|0|2026-01-24T19:50:24.766634Z|runtime|dd5c8cf1-2ad1-4ee8-a87b-5fa734d648ba]ModuleNotFoundError: No module named 'src'
+[MFLOG|0|2026-01-24T19:50:24.766991Z|runtime|6b33d845-be4a-43cb-b635-089134a820ba]Task failed.

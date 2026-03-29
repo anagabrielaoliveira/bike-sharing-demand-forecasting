@@ -1,0 +1,42 @@
+[MFLOG|0|2026-01-25T15:04:54.468703Z|runtime|9a1766de-2df8-4755-bf91-18f8341cac05][I 2026-01-25 12:04:54,468] A new study created in memory with name: no-name-a6b64cef-4244-47f3-bc44-09a12d05967b
+[MFLOG|0|2026-01-25T15:05:00.766576Z|runtime|f9c029e6-3360-48af-ab14-becd749bc723]  0%|          | 0/5 [00:00<?, ?it/s]                                       0%|          | 0/5 [00:00<?, ?it/s]Best trial: 0. Best value: 1.52896:   0%|          | 0/5 [00:00<?, ?it/s]Best trial: 0. Best value: 1.52896:  20%|██        | 1/5 [00:00<00:03,  1.11it/s]                                                                                 Best trial: 0. Best value: 1.52896:  20%|██        | 1/5 [00:02<00:03,  1.11it/s]Best trial: 1. Best value: 1.41774:  20%|██        | 1/5 [00:02<00:03,  1.11it/s]Best trial: 1. Best value: 1.41774:  40%|████      | 2/5 [00:02<00:04,  1.55s/it]                                                                                 Best trial: 1. Best value: 1.41774:  40%|████      | 2/5 [00:03<00:04,  1.55s/it]Best trial: 1. Best value: 1.41774:  40%|████      | 2/5 [00:03<00:04,  1.55s/it]Best trial: 1. Best value: 1.41774:  60%|██████    | 3/5 [00:03<00:02,  1.18s/it]                                                                                 Best trial: 1. Best value: 1.41774:  60%|██████    | 3/5 [00:04<00:02,  1.18s/it]Best trial: 1. Best value: 1.41774:  60%|██████    | 3/5 [00:04<00:02,  1.18s/it]Best trial: 1. Best value: 1.41774:  80%|████████  | 4/5 [00:04<00:01,  1.05s/it]                                                                                 Best trial: 1. Best value: 1.41774:  80%|████████  | 4/5 [00:06<00:01,  1.05s/it]Best trial: 1. Best value: 1.41774:  80%|████████  | 4/5 [00:06<00:01,  1.05s/it]Best trial: 1. Best value: 1.41774: 100%|██████████| 5/5 [00:06<00:00,  1.32s/it]Best trial: 1. Best value: 1.41774: 100%|██████████| 5/5 [00:06<00:00,  1.26s/it]
+[MFLOG|0|2026-01-25T15:05:00.767679Z|runtime|90f5ed6f-a3da-49e0-8a26-6ceb1715abf5]<flow BikeSharingDemandFlow step hpo> failed:
+[MFLOG|0|2026-01-25T15:05:00.773051Z|runtime|b3625b10-6cea-4938-bb30-64a0767e2d58]    Internal error
+[MFLOG|0|2026-01-25T15:05:00.773979Z|runtime|d652ccf8-e234-4bfb-b666-adfefe12c92c]Traceback (most recent call last):
+[MFLOG|0|2026-01-25T15:05:00.774005Z|runtime|d3cea338-dc63-4ce2-be21-05af941cb374]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli.py", line 727, in main
+[MFLOG|0|2026-01-25T15:05:00.774026Z|runtime|d212b6f1-e191-4eea-8041-d29b79eb7f97]    start(auto_envvar_prefix="METAFLOW", obj=state)
+[MFLOG|0|2026-01-25T15:05:00.774044Z|runtime|c117dc9b-a4c1-40d4-9a33-dde2195a05c2]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 829, in __call__
+[MFLOG|0|2026-01-25T15:05:00.774069Z|runtime|7d98149d-ad79-4ce6-91b5-64e033e58b2f]    return self.main(args, kwargs)
+[MFLOG|0|2026-01-25T15:05:00.869467Z|runtime|68d91c88-485b-478d-9100-2d3de25b4524]           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:05:00.869572Z|runtime|051e5d03-0953-429f-a05d-f99a9525d66c]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 782, in main
+[MFLOG|0|2026-01-25T15:05:00.869597Z|runtime|db4881ad-441f-41db-82c5-229574d02a4c]    rv = self.invoke(ctx)
+[MFLOG|0|2026-01-25T15:05:00.869616Z|runtime|a45cf09b-643c-4683-987e-bd80ff80dacd]         ^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:05:00.869636Z|runtime|37a9cd33-3914-44f8-b6cc-43b6ae8cc998]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli_components/utils.py", line 69, in invoke
+[MFLOG|0|2026-01-25T15:05:00.869652Z|runtime|5b1ff896-4580-462a-9478-27e123406a02]    return _process_result(sub_ctx.command.invoke(sub_ctx))
+[MFLOG|0|2026-01-25T15:05:00.869669Z|runtime|b6c1b2bc-9fd8-4142-a309-367eb0a635f7]                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:05:00.869684Z|runtime|43c70fc1-616f-491e-8c3a-9a73c411c4ba]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 1066, in invoke
+[MFLOG|0|2026-01-25T15:05:00.869699Z|runtime|28249b99-efee-4a87-8620-c02093b8e443]    return ctx.invoke(self.callback, ctx.params)
+[MFLOG|0|2026-01-25T15:05:00.869714Z|runtime|6b6de872-0e7c-4f8f-bb30-d748feacc0ff]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:05:00.869729Z|runtime|0e9362b3-205f-4767-97e7-06cd251ba6da]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/core.py", line 610, in invoke
+[MFLOG|0|2026-01-25T15:05:00.869743Z|runtime|19dc3fd9-2ceb-4fa4-a1b9-4cfa05aca6e8]    return callback(args, kwargs)
+[MFLOG|0|2026-01-25T15:05:00.869758Z|runtime|ef904af1-c8cd-40cc-9e44-f4ba86fc7b80]           ^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:05:00.869773Z|runtime|85c59cdb-ae40-4709-969e-63657ee6f4ac]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/tracing/__init__.py", line 27, in wrapper_func
+[MFLOG|0|2026-01-25T15:05:00.869787Z|runtime|c7833ba3-fcb5-4fc7-bc97-f4fa44a0ccb6]    return func(args, kwargs)
+[MFLOG|0|2026-01-25T15:05:00.869801Z|runtime|0b41d918-a257-45b4-8868-e023e0df6b02]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:05:00.869817Z|runtime|449708a1-7bf6-44a2-afc9-d2a5b28f614d]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/_vendor/click/decorators.py", line 21, in new_func
+[MFLOG|0|2026-01-25T15:05:00.869832Z|runtime|0011b95d-208a-4236-9a7e-550bc8d10d9d]    return f(get_current_context(), args, kwargs)
+[MFLOG|0|2026-01-25T15:05:00.869847Z|runtime|76a5a361-3243-45d0-9f08-bc1247becf85]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:05:00.869862Z|runtime|69f06c81-0364-4c6d-9a79-0835d7a4a93a]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/cli_components/step_cmd.py", line 171, in step
+[MFLOG|0|2026-01-25T15:05:00.869876Z|runtime|98198820-ac30-408f-86d9-14c68898e00f]    task.run_step(
+[MFLOG|0|2026-01-25T15:05:00.869890Z|runtime|14cd0a10-54e3-46b8-a3d0-fdc6b10a1dfe]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 899, in run_step
+[MFLOG|0|2026-01-25T15:05:00.869904Z|runtime|c1e9b323-b78d-45d1-adc5-6ebe069a0077]    self._exec_step_function(step_func, orig_step_func)
+[MFLOG|0|2026-01-25T15:05:00.869917Z|runtime|6e152c37-70f8-42de-ba45-8db2c154329d]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 147, in _exec_step_function
+[MFLOG|0|2026-01-25T15:05:00.869931Z|runtime|117102bd-c589-4708-aae9-1d9baaace751]    raise raised_exception
+[MFLOG|0|2026-01-25T15:05:00.869949Z|runtime|f0ba8466-838e-4451-b9f4-73cae23e5ec7]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/metaflow/task.py", line 113, in _exec_step_function
+[MFLOG|0|2026-01-25T15:05:00.869965Z|runtime|a0ca774d-399b-453b-9b74-91f4e73c0e55]    step_function()
+[MFLOG|0|2026-01-25T15:05:00.869986Z|runtime|d86cba1a-123d-4ccd-ad4c-5a92993bf14c]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/flow.py", line 127, in hpo
+[MFLOG|0|2026-01-25T15:05:00.870004Z|runtime|d81110e9-034e-43fb-9d09-cd22f612504a]    json.dump(lgbm_study.best_trial.params, f)
+[MFLOG|0|2026-01-25T15:05:00.870020Z|runtime|e95d501f-28c6-4f7e-99d5-c6b49ae28311]              ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:05:00.870038Z|runtime|60cd8756-b6e6-4892-820d-95837420ef8e]AttributeError: 'NoneType' object has no attribute 'best_trial'
+[MFLOG|0|2026-01-25T15:05:00.870054Z|runtime|0d5d12fa-a0ff-44f3-898a-220d75973098]
+[MFLOG|0|2026-01-25T15:05:00.870436Z|runtime|910e5421-31e9-4cbc-a247-b28df381687a]Task failed.

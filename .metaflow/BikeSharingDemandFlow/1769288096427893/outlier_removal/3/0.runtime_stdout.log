@@ -1,0 +1,13 @@
+[MFLOG|0|2026-01-24T20:54:59.671830Z|runtime|54330aac-1dd4-437f-9b1e-5c71438d6b10]Index(['season', 'holiday', 'workingday', 'weather', 'temp', 'atemp',
+[MFLOG|0|2026-01-24T20:54:59.920138Z|runtime|cfd76844-b8b8-4385-905b-48e81b3b2027]       'humidity', 'windspeed', 'casual', 'registered', 'count', 'hour',
+[MFLOG|0|2026-01-24T20:54:59.920233Z|runtime|f53143c7-8c16-4d8c-b0d5-dc6b26fb7c37]       'dayofweek', 'distance_to_weekend', 'dayofmonth', 'dayofyear',
+[MFLOG|0|2026-01-24T20:54:59.920267Z|runtime|ed291522-0bb9-4309-983e-50f8ad2a1169]       'weekofyear', 'month', 'quarter', 'year', 'weekend', 'date',
+[MFLOG|0|2026-01-24T20:54:59.920298Z|runtime|22c217b7-7483-4463-88ed-5fbac74c9c0e]       'special_holiday', 'temp_vs_humidity', 'temp_vs_windspeed',
+[MFLOG|0|2026-01-24T20:54:59.920327Z|runtime|b7e1d449-836a-461a-acae-400e493c1a04]       'humidity_vs_windspeed', 'peak', 'time_slot'],
+[MFLOG|0|2026-01-24T20:54:59.920347Z|runtime|5d0bec23-d82c-477f-a7dc-4d3cf917c62c]      dtype='str')
+[MFLOG|0|2026-01-24T20:54:59.920368Z|runtime|e8abb586-b422-4808-8f66-5c34c75bf2c4]Index(['season', 'holiday', 'workingday', 'weather', 'temp', 'atemp',
+[MFLOG|0|2026-01-24T20:54:59.920388Z|runtime|609dcc82-0ec3-4524-adb1-737c7abcac11]       'humidity', 'windspeed', 'hour', 'dayofweek', 'distance_to_weekend',
+[MFLOG|0|2026-01-24T20:54:59.920404Z|runtime|ca77fa96-8c18-4033-91e7-232e2ce5d00c]       'dayofmonth', 'dayofyear', 'weekofyear', 'month', 'quarter', 'year',
+[MFLOG|0|2026-01-24T20:54:59.920420Z|runtime|ef041b35-9747-433c-99e5-564d35c626f7]       'weekend', 'date', 'special_holiday', 'temp_vs_humidity',
+[MFLOG|0|2026-01-24T20:54:59.920435Z|runtime|b956277d-c370-401f-ae18-c1fbd869f243]       'temp_vs_windspeed', 'humidity_vs_windspeed', 'peak', 'time_slot'],
+[MFLOG|0|2026-01-24T20:54:59.920451Z|runtime|e8b4132a-d9b8-487b-9b56-3580f8257eeb]      dtype='str')

@@ -1,0 +1,56 @@
+[MFLOG|0|2026-01-25T15:19:05.109498Z|runtime|640e3e79-38ce-41fe-aa8d-6ffcac5ef006][I 2026-01-25 12:18:58,982] Trial 0 finished with value: 1.5289573089152257 and parameters: {'num_leaves': 376, 'max_depth': 15, 'min_data_in_leaf': 74, 'learning_rate': 0.015751320499779727, 'colsample_bytree': 0.1982177084203147, 'n_estimators': 24}. Best is trial 0 with value: 1.5289573089152257.
+[MFLOG|0|2026-01-25T15:19:05.116081Z|runtime|e920c00a-8d60-460f-9fa2-a8fd2fe2583a][I 2026-01-25 12:19:01,384] Trial 1 finished with value: 1.4177428784916917 and parameters: {'num_leaves': 60, 'max_depth': 14, 'min_data_in_leaf': 61, 'learning_rate': 0.02607024758370768, 'colsample_bytree': 0.06955526958101232, 'n_estimators': 98}. Best is trial 1 with value: 1.4177428784916917.
+[MFLOG|0|2026-01-25T15:19:05.116119Z|runtime|5f5b1685-46a6-4635-b5f8-e7616a166dc7][I 2026-01-25 12:19:02,162] Trial 2 finished with value: 1.5668211484973682 and parameters: {'num_leaves': 833, 'max_depth': 5, 'min_data_in_leaf': 19, 'learning_rate': 0.002327067708383781, 'colsample_bytree': 0.3390301308115608, 'n_estimators': 57}. Best is trial 1 with value: 1.4177428784916917.
+[MFLOG|0|2026-01-25T15:19:05.116144Z|runtime|b59a6262-1494-4131-bf4f-cfaf23d6ca21][I 2026-01-25 12:19:03,073] Trial 3 finished with value: 1.5781936771799163 and parameters: {'num_leaves': 433, 'max_depth': 6, 'min_data_in_leaf': 62, 'learning_rate': 0.0019010245319870357, 'colsample_bytree': 0.3275374161084572, 'n_estimators': 43}. Best is trial 1 with value: 1.4177428784916917.
+[MFLOG|0|2026-01-25T15:19:05.116165Z|runtime|6abcc4ef-6f5d-42a8-a029-f4c8c5229ac9][I 2026-01-25 12:19:05,108] Trial 4 finished with value: 1.5523908449151131 and parameters: {'num_leaves': 457, 'max_depth': 13, 'min_data_in_leaf': 20, 'learning_rate': 0.010677482709481349, 'colsample_bytree': 0.6127938404189404, 'n_estimators': 14}. Best is trial 1 with value: 1.4177428784916917.
+[MFLOG|0|2026-01-25T15:19:05.116184Z|runtime|d771d1c0-c00a-4c8f-9980-9d34ba31d72d][W 2026-01-25 12:19:05,111] Trial 0 failed with parameters: {'n_estimators': 44, 'max_depth': 15, 'learning_rate': 0.029106359131330698, 'subsample': 0.6187255599871847, 'colsample_bytree': 0.1982177084203147} because of the following error: XGBoostError('value -1 for Parameter verbosity exceed bound [0,3]\nverbosity: Flag to print out detailed breakdown of runtime.').
+[MFLOG|0|2026-01-25T15:19:05.283898Z|runtime|0cd2ecca-6c65-49c1-b281-8c43c3e8a161]Traceback (most recent call last):
+[MFLOG|0|2026-01-25T15:19:05.283915Z|runtime|433f57cb-0853-4965-aa00-060b343f601a]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/optuna/study/_optimize.py", line 206, in _run_trial
+[MFLOG|0|2026-01-25T15:19:05.283929Z|runtime|2f33dcf4-3563-4d28-a808-a2214a973d7a]    value_or_values = func(trial)
+[MFLOG|0|2026-01-25T15:19:05.283943Z|runtime|15c5f57c-f018-4e1e-8ce2-32e0244651c7]                      ^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.283958Z|runtime|310496e4-7d1d-4892-b547-84a13b8828e2]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/hpo/optuna_hpo.py", line 194, in <lambda>
+[MFLOG|0|2026-01-25T15:19:05.283972Z|runtime|ad761947-3196-482d-8f5d-cf648c3a8412]    lambda trial: xgb_objective(
+[MFLOG|0|2026-01-25T15:19:05.283985Z|runtime|8f63360f-8d6e-4b99-a22f-7e80b930a5d2]                  ^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.284057Z|runtime|68fc1028-d17a-4688-b311-3515117493ef]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/src/hpo/optuna_hpo.py", line 77, in xgb_objective
+[MFLOG|0|2026-01-25T15:19:05.284072Z|runtime|f791c424-d6c0-4fa4-9964-cf7c35ab9bf3]    model.fit(X_train, y_train)
+[MFLOG|0|2026-01-25T15:19:05.284086Z|runtime|4a6a1363-94e5-4064-9d62-50f9962b8c8c]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/sklearn/base.py", line 1336, in wrapper
+[MFLOG|0|2026-01-25T15:19:05.284100Z|runtime|73e999de-faee-47cd-a12a-9f8ed6c4c9f9]    return fit_method(estimator, *args, **kwargs)
+[MFLOG|0|2026-01-25T15:19:05.284113Z|runtime|e558658a-8476-431a-be50-26658b9d1744]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.284127Z|runtime|3f8570af-074a-48f8-9186-5ff71922b1e5]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/sklearn/multioutput.py", line 274, in fit
+[MFLOG|0|2026-01-25T15:19:05.284209Z|runtime|5ce31ba1-797e-4176-becd-de0ce6db86f7]    self.estimators_ = Parallel(n_jobs=self.n_jobs)(
+[MFLOG|0|2026-01-25T15:19:05.284224Z|runtime|fcd255de-bb63-4d91-833e-2219e5613c52]                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.284239Z|runtime|6870e714-4175-4f9f-8f75-b515c4d9d962]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 91, in __call__
+[MFLOG|0|2026-01-25T15:19:05.284253Z|runtime|6d4467ce-63a3-4473-8b8c-7bf703be7c71]    return super().__call__(iterable_with_config_and_warning_filters)
+[MFLOG|0|2026-01-25T15:19:05.284267Z|runtime|6f837779-248d-4c64-89d8-dc9c8bcc8c87]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.284280Z|runtime|6b3868a0-c1e4-416f-bc57-777ae84fb0f4]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1986, in __call__
+[MFLOG|0|2026-01-25T15:19:05.284360Z|runtime|c8776d15-bcde-4f7a-9c1c-33dc78c922b5]    return output if self.return_generator else list(output)
+[MFLOG|0|2026-01-25T15:19:05.284378Z|runtime|8cb7d76f-3063-465c-ab75-24e71d847fe0]                                                ^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.284392Z|runtime|4269e26d-637c-4bc9-99b5-76b121fe4870]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/joblib/parallel.py", line 1914, in _get_sequential_output
+[MFLOG|0|2026-01-25T15:19:05.284405Z|runtime|ecc97520-dcb4-4115-ba1f-286cbe500493]    res = func(*args, **kwargs)
+[MFLOG|0|2026-01-25T15:19:05.284419Z|runtime|32e0fb58-0943-4aba-8048-45e843fd4595]          ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.284433Z|runtime|ebf38f11-b4c9-4858-96fb-c41285155d76]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/sklearn/utils/parallel.py", line 184, in __call__
+[MFLOG|0|2026-01-25T15:19:05.284446Z|runtime|170a2353-049d-43e4-b1dd-dd90f61bb5d7]    return self.function(*args, **kwargs)
+[MFLOG|0|2026-01-25T15:19:05.284530Z|runtime|3fa60209-6a50-4567-9347-b085866e5ff8]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.284544Z|runtime|576000a4-0305-45c9-a1a4-6b21bb0a3534]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/sklearn/multioutput.py", line 63, in _fit_estimator
+[MFLOG|0|2026-01-25T15:19:05.284558Z|runtime|7f9d5648-a607-47e6-badb-6d232d321a46]    estimator.fit(X, y, **fit_params)
+[MFLOG|0|2026-01-25T15:19:05.284571Z|runtime|bad5e7ed-b6c5-4558-a1e8-b91d87179b78]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/xgboost/core.py", line 774, in inner_f
+[MFLOG|0|2026-01-25T15:19:05.284585Z|runtime|2ae2ba6d-446d-4ee5-bd16-c0ddcdb650b6]    return func(**kwargs)
+[MFLOG|0|2026-01-25T15:19:05.284603Z|runtime|6fb548ce-7776-418d-a8f8-166992be24e8]           ^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.284684Z|runtime|e3a0a8c0-857a-4f22-9ad9-f1019a861937]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/xgboost/sklearn.py", line 1337, in fit
+[MFLOG|0|2026-01-25T15:19:05.284699Z|runtime|2194fcd8-c2a1-4ce3-88aa-1dcf70667523]    with config_context(verbosity=self.verbosity):
+[MFLOG|0|2026-01-25T15:19:05.284713Z|runtime|0562603b-e395-4975-8cd5-f821e3045184]         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.284726Z|runtime|14852f8a-cb0e-4383-bba8-2e5e4f7ac10f]  File "/Users/nasserboan/.local/share/uv/python/cpython-3.12.12-macos-aarch64-none/lib/python3.12/contextlib.py", line 137, in __enter__
+[MFLOG|0|2026-01-25T15:19:05.284740Z|runtime|01dccd55-0d7f-463b-86a8-f080fb234851]    return next(self.gen)
+[MFLOG|0|2026-01-25T15:19:05.284753Z|runtime|c17461f3-05b7-45e3-9ffe-f30a5cc20452]           ^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.284767Z|runtime|ece8da69-68b6-41bb-865e-40cfb26a3c2a]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/xgboost/config.py", line 181, in config_context
+[MFLOG|0|2026-01-25T15:19:05.285431Z|runtime|dfd07826-85d9-476a-ba99-27fdb350463e]    set_config(**new_config)
+[MFLOG|0|2026-01-25T15:19:05.285478Z|runtime|f7403331-cf21-4c14-8404-66e8723a636b]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/xgboost/config.py", line 108, in wrap
+[MFLOG|0|2026-01-25T15:19:05.285503Z|runtime|c3fbe6c7-646e-4682-809f-99e83f24b4c0]    return func(*args, **kwargs)
+[MFLOG|0|2026-01-25T15:19:05.285521Z|runtime|c794875f-8e37-48a3-92c9-d84ff0b96a2f]           ^^^^^^^^^^^^^^^^^^^^^
+[MFLOG|0|2026-01-25T15:19:05.285536Z|runtime|1b3bba4a-2e70-4041-b037-4ee1bd877cc7]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/xgboost/config.py", line 132, in set_config
+[MFLOG|0|2026-01-25T15:19:05.285551Z|runtime|e30a724f-d96a-410d-be2e-9156e643e5cb]    _check_call(_LIB.XGBSetGlobalConfig(c_str(config)))
+[MFLOG|0|2026-01-25T15:19:05.285630Z|runtime|33621b15-c303-4daf-9775-844f17bacf71]  File "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.venv/lib/python3.12/site-packages/xgboost/core.py", line 323, in _check_call
+[MFLOG|0|2026-01-25T15:19:05.285647Z|runtime|a31fb9ff-1b72-4953-b675-9280681e0eba]    raise XGBoostError(py_str(_LIB.XGBGetLastError()))
+[MFLOG|0|2026-01-25T15:19:05.285663Z|runtime|2c33ff5a-969e-4401-b8b0-bd3ecab40bf0]xgboost.core.XGBoostError: value -1 for Parameter verbosity exceed bound [0,3]
+[MFLOG|0|2026-01-25T15:19:05.285677Z|runtime|3915f359-557a-4bbf-86c9-2d374a5c7384]verbosity: Flag to print out detailed breakdown of runtime.
+[MFLOG|0|2026-01-25T15:19:05.285691Z|runtime|9ecc3faf-f880-43e8-9aec-955c0b9e6ff7][W 2026-01-25 12:19:05,115] Trial 0 failed with value None.

@@ -1,0 +1,1 @@
+{"flow_id": "BikeSharingDemandFlow", "run_number": "1769352341343469", "step_name": "hpo", "task_id": "5", "field_name": "ds-root", "type": "ds-root", "value": "/Users/nasserboan/projects/bike-sharing-demand-forecasting/.metaflow", "tags": ["attempt_id:0"], "user_name": "nasserboan", "ts_epoch": 1769352350465}

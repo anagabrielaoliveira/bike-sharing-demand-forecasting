@@ -1,0 +1,1 @@
+{"run_number": "1769288535159852", "step_name": "train_baseline_model", "task_id": "4", "flow_id": "BikeSharingDemandFlow", "user_name": "nasserboan", "tags": [], "system_tags": ["user:nasserboan", "metaflow_version:2.19.17", "runtime:dev", "python_version:3.12.12"], "ts_epoch": 1769288538367}
